@@ -1,0 +1,36 @@
+div.category {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+a.category-link {
+    color: #919191;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 800;
+    transition: 500ms;
+}
+
+a.category-link:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #373737;
+    transform: scaleX(0);
+    transition: transform 500ms ease-in-out;
+}
+
+div.category:hover >a.category-link {
+    color: #373737;
+}
+
+div.category:hover > a.category-link:after {
+    transform: scaleX(1);
+}
+
+div.category > a > img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}

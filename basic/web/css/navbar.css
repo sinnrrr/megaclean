@@ -1,0 +1,89 @@
+.navbar-inverse {
+    background-color: white !important;
+    border: 0;
+    text-transform: uppercase;
+    border-bottom: 3px solid #007bff !important;
+    animation: 1s ease-in-out fadeInDown;
+}
+
+.navbar-brand{
+    font-weight: 900;
+    font-size: 25px !important;
+    letter-spacing: 1px;
+    color: #007bff !important;
+    transition: 500ms;
+    /*animation: 1s ease-in-out fadeInLeft;*/
+    /*animation-delay: 100ms;*/
+}
+
+.navbar-brand:hover{
+    color: #20c997 !important;
+    animation: 1s ease-in-out pulse;
+}
+
+nav > div.container > div.navbar-collapse > ul.navbar-nav > li > a {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    /*animation: 1s ease-in-out fadeInRight;*/
+    /*animation-delay: 100ms;*/
+}
+
+nav > div.container > div.navbar-collapse > ul.navbar-nav > li > a:hover {
+    animation: 1s ease-in-out jello;
+}
+
+nav > div.container > div.navbar-collapse > ul.navbar-nav > li.active > a {
+    color: #007bff;
+}
+
+nav > div.container > div.navbar-collapse > ul.navbar-nav > li.active > a:hover {
+    background-color: transparent;
+}
+
+a.dropdown-toggle{
+    background-color: #20c997 !important;
+}
+
+li.active > a.dropdown-toggle {
+    background-color: #20c997 !important;
+}
+
+button.order-button {
+    background-color: #fff;
+}
+
+.navbar-toggle {
+    background-color: #007bff !important;
+    border: 0;
+}
+
+ul.navbar-nav {
+    padding-left: 0;
+}
+
+/*.order-button {*/
+/*    display: block;*/
+/*    background-color: white;*/
+/*    border: 1px solid #007bff;*/
+/*    color: #007bff;*/
+/*    text-align: center;*/
+/*    font-weight: 700;*/
+/*    font-size: 17px;*/
+/*    letter-spacing: 1px;*/
+/*    padding: 5px 10px;*/
+/*    border-radius: 3px;*/
+/*    margin-top: 7px;*/
+/*}*/
+
+/*.order-button:hover {*/
+
+/*}*/
+
+@media screen and (min-width: 768px) {
+    .order-button {
+        margin: 0;
+    }
+}
