@@ -5,7 +5,9 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 
 $this->title = 'Echo-Eko';
-$this->registerCssFile('@web/css/index.css')
+$this->registerCssFile('@web/css/index.css');
+$this->registerCssFile("@web/css/all.min.css");
+
 
 ?>
 
@@ -48,16 +50,16 @@ $this->registerCssFile('@web/css/index.css')
         <h1>We Render Services at Rent and Upkeep for Mobile Sanitary Systems</h1>
         <div class="flex-center">
             <div class="card">
-                <a href="<?= Url::toRoute('rent') ?>" class="fas fa-person-dolly card-icon"></a>
-                <a href="<?= Url::toRoute('rent') ?>">Rent</a>
+                <a href="<?= Url::toRoute(['select', 'mode' => 'rent']) ?>" class="fas fa-person-dolly card-icon"></a>
+                <a href="<?= Url::toRoute(['select', 'mode' => 'rent']) ?>">Rent</a>
             </div>
             <div class="card">
                 <a href="<?= Url::toRoute('service') ?>" class="fas fa-recycle card-icon"></a>
                 <a href="<?= Url::toRoute('service') ?>">Service</a>
             </div>
             <div class="card">
-                <a href="<?= Url::toRoute('store') ?>" class="fas fa-shopping-cart card-icon" style="padding-left: 30px;"></a>
-                <a href="<?= Url::toRoute('store') ?>">Sale</a>
+                <a href="<?= Url::toRoute(['select', 'mode' => 'sale']) ?>" class="fas fa-shopping-cart card-icon" style="padding-left: 30px;"></a>
+                <a href="<?= Url::toRoute(['select', 'mode' => 'sale']) ?>">Sale</a>
             </div>
         </div>
     </div>

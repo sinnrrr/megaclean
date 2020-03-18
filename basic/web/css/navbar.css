@@ -3,6 +3,7 @@
     border: 0;
     text-transform: uppercase;
     border-bottom: 3px solid #007bff !important;
+    box-shadow: 0 0 30px 5px white;
     animation: 1s ease-in-out fadeInDown;
 }
 

@@ -3,6 +3,7 @@ div.category {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin: 50px 50px;
 }
 
 a.category-link {
@@ -30,7 +31,9 @@ div.category:hover > a.category-link:after {
 }
 
 div.category > a > img {
-    width: 100%;
-    height: auto;
-    max-width: 200px;
+    height: 300px;
+}
+
+a:hover {
+    text-decoration: none !important;
 }

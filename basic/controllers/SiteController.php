@@ -126,8 +126,8 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
-    public function actionRent()
+    public function actionSelect($mode)
     {
-        return $this->render('rent');
+        return $this->render('select', ['mode' => $mode]);
     }
 }

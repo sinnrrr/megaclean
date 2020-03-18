@@ -128,20 +128,6 @@ h1{
     font-weight: 800;
 }
 
-footer{
-    border-top: 3px solid #007bff !important;
-    background-color: white !important;
-    animation: 1s ease-in-out fadeInUp;
-}
-
-footer > div.container > p {
-    color: #007bff;
-    font-weight: 700;
-    letter-spacing: 1px;
-    animation: 1s ease-in-out fadeInUp;
-    animation-delay: 100ms;
-}
-
 button.logout {
     font-weight: 600;
     color: #8AC6D0 !important;

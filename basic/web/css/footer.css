@@ -1,0 +1,14 @@
+footer{
+    border-top: 3px solid #007bff !important;
+    background-color: transparent !important;
+    text-transform: uppercase;
+    animation: 1s ease-in-out fadeInUp;
+}
+
+footer > div.container > p {
+    color: #007bff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    animation: 1s ease-in-out fadeInUp;
+    animation-delay: 100ms;
+}

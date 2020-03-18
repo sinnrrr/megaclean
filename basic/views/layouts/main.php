@@ -17,14 +17,14 @@ if (class_exists('yii\debug\Module')) {
 
 Yii::$app->name = 'Echo-Eko';
 
-$this->registerCssFile("@web/css/navbar.css");
-$this->registerCssFile("@web/css/animate.css");
-$this->registerCssFile("@web/css/all.min.css");
 $this->registerCssFile("https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900&display=swap");
 
 AppAsset::register($this);
+
 ?>
+
 <?php $this->beginPage() ?>
+
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
