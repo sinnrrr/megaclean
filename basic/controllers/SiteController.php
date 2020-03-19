@@ -130,4 +130,8 @@ class SiteController extends Controller
     {
         return $this->render('select', ['mode' => $mode]);
     }
+
+    public function actionStore($category = ''){
+        return $this->render('store', ['category' => $category]);
+}
 }

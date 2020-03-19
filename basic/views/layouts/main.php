@@ -54,11 +54,11 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Store', 'url' => ['/site/store']],
             ['label' => 'About', 'url' => ['/site/about']],
 //            Html::a('Order', Url::toRoute('site/about', 'https'), ['class' => 'order-button']),
             ['label' => 'Contact', 'url' => ['/site/contact']],
-            ['label' => 'Order', 'url' => ['/site/contact']],
+//            ['label' => 'Order', 'url' => ['/site/contact']],
         ],
     ]);
     NavBar::end();
