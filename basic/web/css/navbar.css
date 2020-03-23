@@ -4,7 +4,7 @@
     text-transform: uppercase;
     border-bottom: 3px solid #007bff !important;
     box-shadow: 0 0 30px 5px white;
-    animation: 1s ease-in-out fadeInDown;
+    /*animation: 1s ease-in-out fadeInDown;*/
 }
 
 .navbar-brand{
@@ -32,9 +32,21 @@ nav > div.container > div.navbar-collapse > ul.navbar-nav > li > a {
     /*animation-delay: 100ms;*/
 }
 
-nav > div.container > div.navbar-collapse > ul.navbar-nav > li > a:hover {
-    animation: 1s ease-in-out jello;
+nav > div.container > div.navbar-collapse > ul.navbar-nav > li.dropdown > a {
+    background-color: transparent !important;
 }
+
+nav > div.container > div.navbar-collapse > ul.navbar-nav > li.open > a {
+    color: #20c997 !important;
+}
+
+nav > div.container > div.navbar-collapse > ul.navbar-nav > li > a:hover {
+    animation: 1s ease-in-out jello !important;
+}
+
+/*nav > div.container > div.navbar-collapse > ul.navbar-nav > li.dropdown > a:hover {*/
+/*    animation: none !important;*/
+/*}*/
 
 nav > div.container > div.navbar-collapse > ul.navbar-nav > li.active > a {
     color: #007bff;
@@ -42,6 +54,10 @@ nav > div.container > div.navbar-collapse > ul.navbar-nav > li.active > a {
 
 nav > div.container > div.navbar-collapse > ul.navbar-nav > li.active > a:hover {
     background-color: transparent;
+}
+
+nav > div.container > div.navbar-collapse > ul.navbar-nav > li > a:active {
+    color: #20c997 !important;
 }
 
 a.dropdown-toggle{
@@ -83,8 +99,12 @@ ul.navbar-nav {
 
 /*}*/
 
-@media screen and (min-width: 768px) {
-    .order-button {
-        margin: 0;
+@media screen and (max-width: 768px) {
+    /*.order-button {*/
+    /*    margin: 0;*/
+    /*}*/
+    nav > div.container > div.navbar-collapse > ul.navbar-nav > li > a:hover {
+        animation: none !important;
     }
+
 }

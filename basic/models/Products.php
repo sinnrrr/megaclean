@@ -10,7 +10,7 @@ use Yii;
  * @property int $id
  * @property string|null $category
  * @property string $model
- * @property string $photos
+ * @property string|null $photos
  * @property string $description
  * @property string $standard_equipment
  * @property string $technical_data
@@ -37,6 +37,8 @@ class Products extends \yii\db\ActiveRecord
     {
         return [
             [['category', 'photos', 'description', 'standard_equipment', 'technical_data', 'additional_equipment', 'status'], 'string'],
+            [['model', 'description', 'standard_equipment', 'technical_data', 'additional_equipment'], 'required'],
+            [['photos'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 4],
             [['is_rentable', 'is_sellable'], 'integer'],
             [['model', 'review_link'], 'string', 'max' => 255],
         ];
@@ -63,15 +65,45 @@ class Products extends \yii\db\ActiveRecord
         ];
     }
 
+    public static function getProductById($id){
+        return static::find()->where($id)->asArray()->all();
+    }
+
     public static function getAllProducts(){
         return static::find()->asArray()->all();
     }
 
-    public static function getProductsByCategory($category){
+    public static function getAllProductsByMode($mode){
+        if ($mode == 'rent'){
+            return static::find()->where(['is_rentable' => true])->asArray()->all();
+        } else {
+            return static::find()->where(['is_sellable' => true])->asArray()->all();
+        }
+    }
+
+    public static function getAllProductsByCategory($category){
         return static::find()->where(["category" => $category])->asArray()->all();
     }
 
-    public static function getProductById($id){
-        return static::find()->where($id)->asArray()->all();
+    public static function getAllProductsByCategoryAndMode($mode, $category){
+        if ($mode == 'rent'){
+            return static::find()->where(['is_rentable' => true, "category" => $category])->asArray()->all();
+        } else {
+            return static::find()->where(['is_sellable' => true, "category" => $category])->asArray()->all();
+        }
+    }
+
+    public static function getFilteredProducts($mode, $category){
+        if (empty($category) && empty($mode)){
+            return self::getAllProducts();
+        } elseif (empty($category) && !empty($mode)) {
+            return self::getAllProductsByMode($mode);
+        } elseif (!empty($category) && empty($mode)){
+            return self::getAllProductsByCategory($category);
+        } elseif (!empty($category) && !empty($mode)){
+            return self::getAllProductsByCategoryAndMode($mode, $category);
+        } else {
+            return '';
+        }
     }
 }

@@ -32,15 +32,15 @@ foreach ($listOfProducts as $variant){
 ?>
 
 <div class="site-select">
-    <h1 style="text-align: center">Choose what you need:</h1>
+    <h1 style="text-align: center"><?= \Yii::t('app', 'Choose category:') ?></h1>
     <div class="flex-center" style="flex-wrap: wrap">
         <?php
         foreach ($productsAvailable as $product){
             $category = $product;
-            $image = '/basic/web/img/' . $product . ".jpg";
-            $title= ucfirst($product);
+            $image = '/basic/web/img/category/' . $product . ".jpg";
+            $title = \Yii::t('app', ucfirst($product));
 
-            echo $this->render('_category', ['category' => $category, 'image' => $image, 'title' => $title]);
+            echo $this->render('_category', ['mode' => $mode, 'category' => $category, 'image' => $image, 'title' => $title]);
         }
         ?>
     </div>

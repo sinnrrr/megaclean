@@ -48,4 +48,22 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
+  'codemix/yii2-localeurls' => 
+  array (
+    'name' => 'codemix/yii2-localeurls',
+    'version' => '1.7.1.0',
+    'alias' => 
+    array (
+      '@codemix/localeurls' => $vendorDir . '/codemix/yii2-localeurls',
+    ),
+  ),
+  'cetver/yii2-language-selector' => 
+  array (
+    'name' => 'cetver/yii2-language-selector',
+    'version' => '1.0.3.0',
+    'alias' => 
+    array (
+      '@cetver/LanguageSelector' => $vendorDir . '/cetver/yii2-language-selector',
+    ),
+  ),
 );

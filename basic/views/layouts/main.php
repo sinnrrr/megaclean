@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use app\widgets\Alert;
@@ -20,6 +21,16 @@ Yii::$app->name = 'Echo-Eko';
 $this->registerCssFile("https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900&display=swap");
 
 AppAsset::register($this);
+
+//$language = Yii::$app->language;
+$languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
+    'languages' => [
+        'en' => \Yii::t('app', 'English'),
+        'ru' => \Yii::t('app', 'Russian'),
+        'ua' => \Yii::t('app', 'Ukrainian'),
+    ],
+    'options' => ['encode' => false],
+]);
 
 ?>
 
@@ -54,11 +65,10 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Store', 'url' => ['/site/store']],
-            ['label' => 'About', 'url' => ['/site/about']],
-//            Html::a('Order', Url::toRoute('site/about', 'https'), ['class' => 'order-button']),
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-//            ['label' => 'Order', 'url' => ['/site/contact']],
+            ['label' => \Yii::t('app', 'Store'), 'url' => ['/products/store']],
+            ['label' => \Yii::t('app', 'About us'), 'url' => ['/site/about']],
+            ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
+            $languageItem->toArray()
         ],
     ]);
     NavBar::end();
