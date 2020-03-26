@@ -60,7 +60,7 @@ $config = [
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
             'languages' => ['ua', 'ru', 'en'],
-        ]
+        ],
     ],
     'params' => $params,
 ];

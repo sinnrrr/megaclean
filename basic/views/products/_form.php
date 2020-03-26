@@ -10,9 +10,9 @@ use yii\widgets\ActiveForm;
 
 <div class="products-form">
 
-    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+    <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'category')->dropDownList([ 'biotoilet' => 'Biotoilet', 'washbasin' => 'Washbasin', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'category')->dropDownList(['biotoilets' => 'Biotoilets', 'washbasins' => 'Washbasins', 'urinals' => 'Urinals', 'handstands' => 'Handstands', 'showers' => 'Showers', 'plumbing_modules' => 'Plumbing modules', 'garbage_containers' => 'Garbage containers',], ['prompt' => '']) ?>
 
     <?= $form->field($model, 'model')->textInput(['maxlength' => true]) ?>
 
@@ -26,13 +26,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'additional_equipment')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'review_link')->textInput(['maxlength' => true, 'placeholder' => 'Not required']) ?>
+    <?= $form->field($model, 'review_link')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'is_rentable')->dropDownList([ true => 'true', false => 'false' ]) ?>
+    <?= $form->field($model, 'is_rentable')->dropDownList([true => 'true', false => 'false']) ?>
 
-    <?= $form->field($model, 'is_sellable')->dropDownList([ true => 'true', false => 'false' ]) ?>
+    <?= $form->field($model, 'is_sellable')->dropDownList([true => 'true', false => 'false']) ?>
 
-    <?= $form->field($model, 'status')->dropDownList([ 'available' => 'Available', 'sold_out' => 'Sold out', 'disabled' => 'Disabled', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'status')->dropDownList(['available' => 'Available', 'sold_out' => 'Sold out', 'disabled' => 'Disabled',], ['prompt' => '']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

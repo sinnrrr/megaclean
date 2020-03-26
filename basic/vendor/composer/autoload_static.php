@@ -37,6 +37,10 @@ class ComposerStaticInit6c5f0cf6b6a5cd6eef3de03f1df0a304
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'd' => 
+        array (
+            'dosamigos\\gallery\\' => 18,
+        ),
         'c' => 
         array (
             'codemix\\localeurls\\' => 19,
@@ -136,6 +140,10 @@ class ComposerStaticInit6c5f0cf6b6a5cd6eef3de03f1df0a304
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'dosamigos\\gallery\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/2amigos/yii2-gallery-widget/src',
         ),
         'codemix\\localeurls\\' => 
         array (

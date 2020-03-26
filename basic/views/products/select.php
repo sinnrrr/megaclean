@@ -1,18 +1,25 @@
 <?php
 
 use app\models\Products;
-use yii\helpers\Url;
 
-/* @var $this yii\web\View */
+/* @var $this \yii\web\View */
 /* @var $mode */
 
 $this->title = 'Echo-Eko | Store';
 $this->registerCssFile('@web/css/select.css');
 
 $productsAvailable = [];
-$listOfProducts = [0 => 'biotoilet', 1 => 'washbasin'];
+$listOfProducts = [
+    0 => 'biotoilets',
+    1 => 'washbasins',
+    2 => 'urinals',
+    3 => 'handstands',
+    4 => 'showers',
+    5 => 'plumbing_modules',
+    6 => 'garbage_containers'
+];
 
-switch ($mode){
+switch ($mode) {
     case 'sale':
         $products = Products::find()->select('category')->where(['is_sellable' => true])->asArray()->all();
         break;
@@ -21,9 +28,9 @@ switch ($mode){
         break;
 }
 
-foreach ($listOfProducts as $variant){
-    foreach ($products as $product){
-        if (!in_array($variant, $productsAvailable) && in_array($variant, $product)){
+foreach ($listOfProducts as $variant) {
+    foreach ($products as $product) {
+        if (!in_array($variant, $productsAvailable) && in_array($variant, $product)) {
             array_push($productsAvailable, $variant);
         }
     }
@@ -35,12 +42,18 @@ foreach ($listOfProducts as $variant){
     <h1 style="text-align: center"><?= \Yii::t('app', 'Choose category:') ?></h1>
     <div class="flex-center" style="flex-wrap: wrap">
         <?php
-        foreach ($productsAvailable as $product){
+        foreach ($productsAvailable as $product) {
             $category = $product;
+            $productName = preg_replace('/_/', ' ', $product);
             $image = '/basic/web/img/category/' . $product . ".jpg";
-            $title = \Yii::t('app', ucfirst($product));
+            $title = \Yii::t('app', ucfirst($productName));
 
-            echo $this->render('_category', ['mode' => $mode, 'category' => $category, 'image' => $image, 'title' => $title]);
+            echo $this->render('_category', [
+                'mode' => $mode,
+                'category' => $category,
+                'image' => $image,
+                'title' => $title
+            ]);
         }
         ?>
     </div>

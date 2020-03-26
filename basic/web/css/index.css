@@ -55,14 +55,31 @@ div.cardsHolder > h1 {
 }
 
 #myCarousel{
-    width: 100%;
-    height: auto;
-    max-height: 300px;
+    width: 80%;
+    max-height: 500px;
 }
 
 #myCarousel > * {
-    max-height: 300px;
+    max-height: 500px;
 }
+
+div.item > img {
+    width: 100%;
+    max-height: 500px;
+}
+
+div.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+}
+
+div.carousel-caption > h3 {
+    font-size: 32px;
+}
+
 
 @media screen and (min-width: 480px){
 
@@ -81,14 +98,29 @@ div.cardsHolder > h1 {
 
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
+
+    #myCarousel {
+        width: 100%;
+    }
+
+    div.cardsHolder > h1 {
+        font-size: 28px;
+    }
 
     div.cardsHolder > div.flex-center {
         flex-direction: column;
     }
 
-    div.cardsHolder > div.flex-center div:nth-child(2){
+    div.cardsHolder > div.flex-center div:nth-child(2) {
         margin: 15px 0;
     }
 
+    div.carousel-caption {
+        background-color: transparent;
+    }
+
+    div.carousel-caption > h3 {
+        font-size: 20px;
+    }
 }

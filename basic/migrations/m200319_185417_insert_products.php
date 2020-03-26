@@ -14,9 +14,9 @@ class m200319_185417_insert_products extends Migration
     {
         $this->insert('products', [
             'id' => NULL,
-            'category' => 'biotoilet',
+            'category' => 'biotoilets',
             'model' => 'Aspen Standard1',
-            'photos' => 'none',
+            'photos' => '',
             'description' =>'Very good toilet for festivals',
             'standard_equipment' => 'asd',
             'technical_data' => 'asd',
@@ -29,9 +29,9 @@ class m200319_185417_insert_products extends Migration
 
         $this->insert('products', [
             'id' => NULL,
-            'category' => 'biotoilet',
+            'category' => 'biotoilets',
             'model' => 'Aspen Standard2',
-            'photos' => 'none',
+            'photos' => '',
             'description' =>'Very good toilet for festivals',
             'standard_equipment' => 'asd',
             'technical_data' => 'asd',
@@ -44,9 +44,9 @@ class m200319_185417_insert_products extends Migration
 
         $this->insert('products', [
             'id' => NULL,
-            'category' => 'biotoilet',
+            'category' => 'biotoilets',
             'model' => 'Aspen Standard3',
-            'photos' => 'none',
+            'photos' => '',
             'description' =>'Very good toilet for festivals',
             'standard_equipment' => 'asd',
             'technical_data' => 'asd',
@@ -59,9 +59,9 @@ class m200319_185417_insert_products extends Migration
 
         $this->insert('products', [
             'id' => NULL,
-            'category' => 'biotoilet',
+            'category' => 'biotoilets',
             'model' => 'Aspen Standard4',
-            'photos' => 'none',
+            'photos' => '',
             'description' =>'Very good toilet for festivals',
             'standard_equipment' => 'asd',
             'technical_data' => 'asd',

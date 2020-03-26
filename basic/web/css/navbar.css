@@ -99,6 +99,23 @@ ul.navbar-nav {
 
 /*}*/
 
+ul#w1 > li.dropdown > ul#w2 {
+    margin-top: 3px;
+    width: 170px !important;
+    border: 3px solid #007bff;
+    border-top: none;
+}
+
+ul#w2 > li > a {
+    color: #007bff;
+    font-weight: 700;
+    text-align: center;
+}
+
+ul#w2 > li > a:active {
+    color: #20c997;
+}
+
 @media screen and (max-width: 768px) {
     /*.order-button {*/
     /*    margin: 0;*/
@@ -107,4 +124,11 @@ ul.navbar-nav {
         animation: none !important;
     }
 
+    ul#w1 > li.dropdown > ul#w2 {
+        border: none;
+    }
+
+    ul#w2 > li > a {
+        text-align: left;
+    }
 }

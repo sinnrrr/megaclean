@@ -31,6 +31,25 @@ class ProductsController extends Controller
         ];
     }
 
+    function uploadAll($model)
+    {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->photos = UploadedFile::getInstances($model, 'photos');
+            if (!empty($model->photos)) {
+                foreach ($model->photos as $key => $value) {
+                    $images[$key] = time() . '_' . uniqid(rand()) . '.' . $value->extension;
+                    $value->saveAs('uploads/' . $images[$key]);
+                }
+                $model->photos = json_encode($images);
+            } else {
+                $model->photos = '';
+            }
+            if ($model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }
+    }
+
     /**
      * Lists all Products models.
      * @return mixed
@@ -68,20 +87,8 @@ class ProductsController extends Controller
     {
         $model = new Products();
 
-        if ($model->load(Yii::$app->request->post()) ) {
-
-            $model->photos = UploadedFile::getInstances($model, 'photos');
-
-            foreach ($model->photos as $key=>$value) {
-                $value->saveAs('uploads/' . $value->baseName . '.' . $value->extension);
-                $images[$key] = time() . '_' . uniqid(rand()) . '.' . $value->extension;
-            }
-
-            $model->photos = json_encode($images);
-
-            if ($model->save()){
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
+        if ($model->load(Yii::$app->request->post())) {
+            $this->uploadAll($model);
         }
 
         return $this->render('create', [
@@ -100,21 +107,8 @@ class ProductsController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) ) {
-
-            $model->photos = UploadedFile::getInstances($model, 'photos');
-
-            foreach ($model->photos as $key=>$value) {
-                $currentImageName = time() . '_' . uniqid(rand());
-                $value->saveAs('uploads/' . $currentImageName . '.' . $value->extension);
-                $images[$key] = $currentImageName . '.' . $value->extension;
-            }
-
-            $model->photos = json_encode($images);
-
-            if ($model->save()){
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
+        if ($model->load(Yii::$app->request->post())) {
+            $this->uploadAll($model);
         }
 
         return $this->render('update', [
@@ -128,6 +122,8 @@ class ProductsController extends Controller
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
      */
     public function actionDelete($id)
     {
@@ -157,7 +153,13 @@ class ProductsController extends Controller
         return $this->render('select', ['mode' => $mode]);
     }
 
-    public function actionStore($mode = '', $category = ''){
+    public function actionStore($mode = '', $category = '')
+    {
         return $this->render('store', ['mode' => $mode, 'category' => $category]);
+    }
+
+    public function actionProduct($id)
+    {
+        return $this->render('product', ['id' => $id]);
     }
 }

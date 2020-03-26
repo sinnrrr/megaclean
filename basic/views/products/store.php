@@ -6,14 +6,16 @@ use app\models\Products;
 /* @var $mode */
 /* @var $category */
 
+
 $products = Products::getFilteredProducts($mode, $category);
 
 $this->registerCssFile("@web/css/store.css");
+$this->registerCssFile('@web/css/all.min.css');
 
 ?>
 
 <div class="site-store">
-    <h1 class="text-center"><?= \Yii::t('app', ucfirst($category)) ?></h1>
+    <h1 class="text-center"><?= empty($category) ? \Yii::t('app', 'Store') : \Yii::t('app', ucfirst($category)) ?></h1>
     <div class="flex-center">
         <?php
         foreach ($products as $product){
