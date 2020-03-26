@@ -8,6 +8,17 @@ $this->title = 'Echo-Eko';
 $this->registerCssFile('@web/css/index.css');
 $this->registerCssFile("@web/css/all.min.css");
 
+function renderBrands(){
+    $imagesArray = scandir('img/brands');
+
+    unset($imagesArray[0]);
+    unset($imagesArray[1]);
+
+    foreach ($imagesArray as $image){
+        echo "<img src='/basic/web/img/brands/{$image}' alt=''>";
+    }
+}
+
 ?>
 
 <div class="site-index">
@@ -24,25 +35,23 @@ $this->registerCssFile("@web/css/all.min.css");
             <div class="carousel-inner">
                 <div class="item active">
                     <div class="carousel-caption">
-                        <h3><?= \Yii::t('app', 'Festival and events') ?></h3>
+                        <h3><?= \Yii::t('app', 'Festivals and events') ?></h3>
                     </div>
-                    <img src="https://www.visit-hampshire.co.uk/dbimgs/Wickham%20Festival%202019.jpg" alt="">
+                    <img src="/basic/web/img/carousel/festivals.jpg" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
-                        <h3><?= \Yii::t('app', 'Construction') ?></h3>
+                        <h3><?= \Yii::t('app', 'Constructions') ?></h3>
                     </div>
-                    <img src="https://www.letsbuild.com/wp-content/uploads/2019/10/shutterstock_1247187910-1280x720.png"
-                         alt="">
+                    <img src="/basic/web/img/carousel/construction.png" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
-                        <h3><?= \Yii::t('app', 'Military education') ?></h3>
+                        <h3><?= \Yii::t('app', 'Military educations') ?></h3>
                     </div>
-                    <img src="https://static.ukrinform.com/photos/2019_10/thumb_files/630_360_1569913119-496.jpg"
-                         alt="">
+                    <img src="/basic/web/img/carousel/military.jpg" alt="">
                 </div>
             </div>
 
@@ -58,7 +67,7 @@ $this->registerCssFile("@web/css/all.min.css");
         </div>
     </div>
     <hr>
-    <div class="cardsHolder">
+    <section class="cards-holder">
         <h1><?= \Yii::t('app', 'We render services at rent and upkeep for mobile sanitary systems') ?></h1>
         <div class="flex-center">
             <div class="card">
@@ -76,5 +85,14 @@ $this->registerCssFile("@web/css/all.min.css");
                 <a href="<?= Url::toRoute(['products/select', 'mode' => 'sale']) ?>"><?= \Yii::t('app', 'Sale') ?></a>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="working-process">
+        <div class="line"></div>
+    </section>
+    <section class="brands">
+        <h3><?= Yii::t('app', 'We cooperate with leading global companies') ?></h3>
+        <div class="brand-logos">
+            <?= renderBrands() ?>
+        </div>
+    </section>
 </div>

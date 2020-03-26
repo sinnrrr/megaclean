@@ -19,7 +19,8 @@ return [
     'Showers' => 'Душові кабіни',
     'Plumbing modules' => 'Сантехнічні модулі',
     'Garbage containers' => 'Контейнери для сміття',
-    'Festival and events' => 'Фестивалі та масові заходи',
-    'Construction' => 'Будівництво',
-    'Military education' => 'Військові навчаня',
+    'Festivals and events' => 'Фестивалі та масові заходи',
+    'Constructions' => 'Будівництво',
+    'Military educations' => 'Військові навчаня',
+    'We cooperate with leading global companies' => 'Наша команда співпрацює з провідними компаніями світового масштабу',
 ];

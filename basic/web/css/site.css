@@ -4,6 +4,11 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+*::selection {
+    color: white;
+    background-color: #20c997;
+}
+
 .wrap {
     min-height: 100%;
     height: auto;
