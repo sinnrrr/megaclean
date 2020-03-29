@@ -8,13 +8,14 @@ $this->title = 'Echo-Eko';
 $this->registerCssFile('@web/css/index.css');
 $this->registerCssFile("@web/css/all.min.css");
 
-function renderBrands(){
+function renderBrands()
+{
     $imagesArray = scandir('img/brands');
 
     unset($imagesArray[0]);
     unset($imagesArray[1]);
 
-    foreach ($imagesArray as $image){
+    foreach ($imagesArray as $image) {
         echo "<img src='/basic/web/img/brands/{$image}' alt=''>";
     }
 }
@@ -87,7 +88,95 @@ function renderBrands(){
         </div>
     </section>
     <section class="working-process">
-        <div class="line"></div>
+        <h1 class="text-center"><?= \Yii::t('app', 'Working process') ?></h1>
+        <div class="block-holder">
+            <div class="block">
+                <span class="block-number">1</span>
+                <div class="block-text">
+                    <i class="fas fa-phone-alt"></i>
+                    <span><?= \Yii::t('app', 'Call') ?></span>
+                </div>
+            </div>
+            <div class="block-wrap">
+                <div class="arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="block">
+                    <span class="block-number">2</span>
+                    <div class="block-text">
+                        <i class="fas fa-file-alt"></i>
+                        <span><?= \Yii::t('app', 'Contract') ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="block-wrap">
+                <div class="arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="block">
+                    <span class="block-number">3</span>
+                    <div class="block-text">
+                        <i class="fas fa-truck"></i>
+                        <span><?= \Yii::t('app', 'Delivery') ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="block-wrap">
+                <div class="arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="block">
+                    <span class="block-number">4</span>
+                    <div class="block-text">
+                        <i class="fas fa-forklift"></i>
+                        <span><?= \Yii::t('app', 'Assembling') ?></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="working-process-mobile">
+        <h1 class="text-center"><?= \Yii::t('app', 'Working process') ?></h1>
+        <div class="block-holder">
+            <div class="block">
+                <span class="block-number">1</span>
+                <div class="block-text">
+                    <i class="fas fa-phone-alt"></i>
+                    <span><?= \Yii::t('app', 'Call') ?></span>
+                </div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="block">
+                <span class="block-number">2</span>
+                <div class="block-text">
+                    <i class="fas fa-file-alt"></i>
+                    <span><?= \Yii::t('app', 'Contract') ?></span>
+                </div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="block">
+                <span class="block-number">3</span>
+                <div class="block-text">
+                    <i class="fas fa-truck"></i>
+                    <span><?= \Yii::t('app', 'Delivery') ?></span>
+                </div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="block">
+                <span class="block-number">4</span>
+                <div class="block-text">
+                    <i class="fas fa-forklift"></i>
+                    <span><?= \Yii::t('app', 'Assembling') ?></span>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="brands">
         <h3><?= Yii::t('app', 'We cooperate with leading global companies') ?></h3>

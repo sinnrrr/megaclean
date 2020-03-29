@@ -23,7 +23,7 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/navbar.css',
         'css/footer.css',
-        'css/animate.css',
+        'css/animate.css'
     ];
     public $js = [
     ];

@@ -23,4 +23,9 @@ return [
     'Constructions' => 'Строительство',
     'Military educations' => 'Военные учения',
     'We cooperate with leading global companies' => 'Наша команда сотрудничает с ведущими компаниями мирового уровня',
+    'Working process' => 'Рабочий процесс',
+    'Call' => 'Звонок',
+    'Contract' => 'Договор',
+    'Delivery' => 'Доставка',
+    'Assembling' => 'Монтаж',
 ];
