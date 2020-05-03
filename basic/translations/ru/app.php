@@ -28,4 +28,13 @@ return [
     'Contract' => 'Договор',
     'Delivery' => 'Доставка',
     'Assembling' => 'Монтаж',
+    'Order' => 'Заказать',
+    'Standard equipment' => 'Стандартное оборудование',
+    'Technical data' => 'Технические данные',
+    'Additional equipment' => 'Дополнительное оборудование',
+    // 'Name' => 'Имя',
+    // 'Email' => 'Электронная почта',
+    // 'Subject' => 'Тема',
+    // 'Body' => 'Сообщение',
+    'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.' => 'Если у вас есть деловые или другие вопросы, пожалуйста, заполните следующую форму, чтобы связаться с нами. Спасибо.'
 ];

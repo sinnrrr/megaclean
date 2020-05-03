@@ -5,13 +5,12 @@
 use yii\helpers\Html;
 
 $this->title = 'About us';
-$this->params['breadcrumbs'][] = $this->title;
 $this->registerCssFile('@web/css/about.css');
 
 ?>
 
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= \Yii::t('app', $this->title) ?></h1>
 
 <!--    <img src="/basic/web/img/about/experience.png" alt="" style="float: right; height: 200px;">-->
     <p>Маючи понад 9-ти річний досвід роботи в галузі портативної санітарії, компанія Мегаклін створила бездоганну

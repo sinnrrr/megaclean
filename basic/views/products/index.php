@@ -9,6 +9,7 @@ use yii\grid\GridView;
 
 $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="products-index">
 
@@ -25,20 +26,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
             'id',
             'category',
             'model',
-            'photos:ntext',
-            'description:ntext',
+           'photos:ntext',
+            // 'description:ntext',
             //'standard_equipment:ntext',
             //'technical_data:ntext',
             //'additional_equipment:ntext',
-            //'review_link',
-            //'is_rentable',
-            //'is_sellable',
-            //'status',
-
+            'review_link',
+            'is_rentable',
+            'is_sellable',
+            'status',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

@@ -23,7 +23,8 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/navbar.css',
         'css/footer.css',
-        'css/animate.css'
+        'css/animate.css',
+        'https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900&display=swap'
     ];
     public $js = [
     ];

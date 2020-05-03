@@ -19,7 +19,7 @@ div.card:hover {
     animation: 500ms ease-in-out pulse;
 }
 
-div.card:active{
+div.card:active {
     border: 3px solid #20c997;
 }
 
@@ -31,7 +31,7 @@ div.card a:last-child {
     padding-bottom: 30px;
 }
 
-div.card > a {
+div.card>a {
     color: #007bff;
     text-decoration: none;
     font-size: 32px;
@@ -39,31 +39,31 @@ div.card > a {
     padding: 5px 50px;
 }
 
-div.card > a.card-icon {
+div.card>a.card-icon {
     font-size: 150px;
 }
 
-div.card > img {
+div.card>img {
     width: 100%;
     height: auto;
     max-width: 500px;
 }
 
-section.cards-holder > h1 {
+section.cards-holder>h1 {
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-#myCarousel{
+#myCarousel {
     width: 80%;
     max-height: 500px;
 }
 
-#myCarousel > * {
+#myCarousel>* {
     max-height: 500px;
 }
 
-div.item > img {
+div.item>img {
     width: 100%;
     max-height: 500px;
 }
@@ -76,7 +76,7 @@ div.carousel-caption {
     border-radius: 100px;
 }
 
-div.carousel-caption > h3 {
+div.carousel-caption>h3 {
     font-size: 32px;
 }
 
@@ -91,7 +91,7 @@ section.brands {
     padding: 30px;
 }
 
-section.brands > h3 {
+section.brands>h3 {
     font-weight: 800;
 }
 
@@ -103,10 +103,11 @@ div.brand-logos {
     flex-direction: row;
 }
 
-div.brand-logos > img {
+div.brand-logos>img {
     height: 70px;
     filter: grayscale(100%);
     margin: 30px;
+    transition: 300ms;
 }
 
 section.working-process {
@@ -130,7 +131,7 @@ div.block {
     display: flex;
 }
 
-div.block > * {
+div.block>* {
     transition: 300ms;
     cursor: default;
 }
@@ -150,20 +151,20 @@ div.block-text:hover {
     background-color: #20c997;
 }
 
-div.block-text:hover > * {
+div.block-text:hover>* {
     color: white;
 }
 
-div.block-text > * {
+div.block-text>* {
     color: #007bff;
 }
 
-div.block-text > span {
+div.block-text>span {
     font-size: 20px;
     font-weight: 700;
 }
 
-div.block-text > i {
+div.block-text>i {
     font-size: 80px;
 }
 
@@ -178,7 +179,7 @@ span.block-number {
     cursor: default;
 }
 
-div.arrow > i {
+div.arrow>i {
     position: relative;
     transform: translateY(-50%);
     top: 50%;
@@ -194,79 +195,69 @@ section.working-process-mobile {
     margin: 30px 0;
 }
 
-section.working-process-mobile > div.block-holder {
+section.working-process-mobile>div.block-holder {
     flex-direction: column;
 }
 
-section.working-process-mobile > div.block-holder > div.arrow {
+section.working-process-mobile>div.block-holder>div.arrow {
     margin: 15px auto;
 }
 
-section.working-process-mobile > div.block-holder > div.arrow > i {
-    font-size: 15vw;
+section.working-process-mobile>div.block-holder>div.arrow>i {
+    font-size: 10vw;
     transform: translateY(0);
 }
 
-section.working-process-mobile > div.block-holder > div.block {
+section.working-process-mobile>div.block-holder>div.block {
     max-width: none;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-section.working-process-mobile > div.block-holder > div.block > div.block-text {
+section.working-process-mobile>div.block-holder>div.block>div.block-text {
     width: 80%;
     max-width: 500px;
 }
 
-section.working-process-mobile > div.block-holder > div.block > div.block-text > i {
-    font-size: 20vw;
+section.working-process-mobile>div.block-holder>div.block>div.block-text>i {
+    font-size: 15vw;
 }
 
-section.working-process-mobile > div.block-holder > div.block > div.block-text > span {
+section.working-process-mobile>div.block-holder>div.block>div.block-text>span {
     font-size: 5vw;
 }
 
-@media screen and (min-width: 480px){
-
+@media screen and (min-width: 480px) {
     div.card {
         margin-right: 100px !important;
         margin-left: 100px !important;
     }
-
 }
 
-@media screen and (min-width: 992px){
-
+@media screen and (min-width: 992px) {
     div.card {
         margin: 0 3% !important;
     }
-
 }
 
 @media screen and (max-width: 992px) {
-
     #myCarousel {
         width: 100%;
     }
-
-    section.cards-holder > h1 {
+    section.cards-holder>h1 {
         font-size: 28px;
     }
-
-    section.cards-holder > div.flex-center {
+    section.cards-holder>div.flex-center {
         flex-direction: column;
     }
-
-    section.cards-holder > div.flex-center div:nth-child(2) {
+    section.cards-holder>div.flex-center div:nth-child(2) {
         margin: 15px 0;
     }
-
     div.carousel-caption {
         background-color: transparent;
     }
-
-    div.carousel-caption > h3 {
+    div.carousel-caption>h3 {
         font-size: 20px;
     }
 }

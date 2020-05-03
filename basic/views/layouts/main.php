@@ -18,8 +18,6 @@ if (class_exists('yii\debug\Module')) {
 
 Yii::$app->name = 'Echo-Eko';
 
-$this->registerCssFile("https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900&display=swap");
-
 AppAsset::register($this);
 
 //$language = Yii::$app->language;
@@ -66,8 +64,8 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => \Yii::t('app', 'Store'), 'url' => ['/products/store']],
+            ['label' => \Yii::t('app', 'Order'), 'url' => ['/site/order']],
             ['label' => \Yii::t('app', 'About us'), 'url' => ['/site/about']],
-            ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
             $languageItem->toArray()
         ],
     ]);

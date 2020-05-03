@@ -21,7 +21,7 @@ class m200317_230454_create_table_products extends Migration
             'standard_equipment' => $this->text()->notNull(),
             'technical_data' => $this->text()->notNull(),
             'additional_equipment' => $this->text(),
-            'review_link' => $this->string(),
+            'review_id' => $this->string(),
             'is_rentable' => $this->boolean()->defaultValue(false)->notNull(),
             'is_sellable' => $this->boolean()->defaultValue(false)->notNull(),
             'status' => "ENUM('available','sold_out','disabled')"
