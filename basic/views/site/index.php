@@ -135,7 +135,6 @@ function renderBrands()
             </div>
         </div>
     </section>
-
     <section class="working-process-mobile">
         <h1 class="text-center"><?= \Yii::t('app', 'Working process') ?></h1>
         <div class="block-holder">

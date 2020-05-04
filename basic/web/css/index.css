@@ -1,272 +1,280 @@
 .cards-holder {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 div.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 3px solid #007bff;
-    border-radius: 10px;
-    text-align: center;
-    transition: 500ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid #007bff;
+  border-radius: 10px;
+  text-align: center;
+  transition: 500ms;
 }
 
 div.card:hover {
-    animation: 500ms ease-in-out pulse;
+  animation: 500ms ease-in-out pulse;
 }
 
 div.card:active {
-    border: 3px solid #20c997;
+  border: 3px solid #20c997;
 }
 
 div.card a:first-child {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 div.card a:last-child {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
-div.card>a {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: 800;
-    padding: 5px 50px;
+div.card > a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 800;
+  padding: 5px 50px;
 }
 
-div.card>a.card-icon {
-    font-size: 150px;
+div.card > a.card-icon {
+  font-size: 150px;
 }
 
-div.card>img {
-    width: 100%;
-    height: auto;
-    max-width: 500px;
+div.card > img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
 }
 
-section.cards-holder>h1 {
-    margin-top: 0;
-    margin-bottom: 20px;
+section.cards-holder > h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 #myCarousel {
-    width: 80%;
-    max-height: 500px;
+  width: 80%;
+  max-height: 500px;
 }
 
-#myCarousel>* {
-    max-height: 500px;
+#myCarousel > * {
+  max-height: 500px;
 }
 
-div.item>img {
-    width: 100%;
-    max-height: 500px;
+div.item > img {
+  width: 100%;
+  max-height: 500px;
 }
 
 div.carousel-caption {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 100px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
 }
 
-div.carousel-caption>h3 {
-    font-size: 32px;
+div.carousel-caption > h3 {
+  font-size: 32px;
 }
 
 section.brands {
-    display: flex;
-    overflow-wrap: break-word;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: #f5f5f5;
-    margin-top: 80px;
-    padding: 30px;
+  display: flex;
+  overflow-wrap: break-word;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin-top: 80px;
+  padding: 30px;
 }
 
-section.brands>h3 {
-    font-weight: 800;
+section.brands > h3 {
+  font-weight: 800;
 }
 
 div.brand-logos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    flex-direction: row;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: row;
 }
 
-div.brand-logos>img {
-    height: 70px;
-    filter: grayscale(100%);
-    margin: 30px;
-    transition: 300ms;
+div.brand-logos > img {
+  height: 70px;
+  filter: grayscale(100%);
+  margin: 30px;
+  transition: 300ms;
 }
 
 section.working-process {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 section.working-process-mobile {
-    display: none;
+  display: none;
 }
 
 div.block-holder {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
 }
 
 div.block {
-    margin: 15px 0;
-    max-width: 300px;
-    display: flex;
+  margin: 15px 0;
+  max-width: 300px;
+  display: flex;
 }
 
-div.block>* {
-    transition: 300ms;
-    cursor: default;
+div.block > * {
+  transition: 300ms;
+  cursor: default;
 }
 
 div.block-text {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    border: 5px solid #20c997;
-    border-radius: 0 5px 5px 0;
-    border-left: none;
-    padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  border: 5px solid #20c997;
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+  padding: 15px 30px;
 }
 
 div.block-text:hover {
-    background-color: #20c997;
+  background-color: #20c997;
 }
 
-div.block-text:hover>* {
-    color: white;
+div.block-text:hover > * {
+  color: white;
 }
 
-div.block-text>* {
-    color: #007bff;
+div.block-text > * {
+  color: #007bff;
 }
 
-div.block-text>span {
-    font-size: 20px;
-    font-weight: 700;
+div.block-text > span {
+  font-size: 20px;
+  font-weight: 700;
 }
 
-div.block-text>i {
-    font-size: 80px;
+div.block-text > i {
+  font-size: 80px;
 }
 
 span.block-number {
-    background-color: #20c997;
-    padding: 10px 15px;
-    border-radius: 5px 0 0 5px;
-    float: left;
-    font-size: 28px;
-    font-weight: 700;
-    color: white;
-    cursor: default;
+  background-color: #20c997;
+  padding: 10px 15px;
+  border-radius: 5px 0 0 5px;
+  float: left;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  cursor: default;
 }
 
-div.arrow>i {
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%;
-    margin: auto 15px;
-    font-size: 50px;
+div.arrow > i {
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  margin: auto 15px;
+  font-size: 50px;
 }
 
 div.block-wrap {
-    display: flex;
+  display: flex;
 }
 
 section.working-process-mobile {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
-section.working-process-mobile>div.block-holder {
-    flex-direction: column;
+section.working-process-mobile > div.block-holder {
+  flex-direction: column;
 }
 
-section.working-process-mobile>div.block-holder>div.arrow {
-    margin: 15px auto;
+section.working-process-mobile > div.block-holder > div.arrow {
+  margin: 15px auto;
 }
 
-section.working-process-mobile>div.block-holder>div.arrow>i {
-    font-size: 10vw;
-    transform: translateY(0);
+section.working-process-mobile > div.block-holder > div.arrow > i {
+  font-size: 10vw;
+  transform: translateY(0);
 }
 
-section.working-process-mobile>div.block-holder>div.block {
-    max-width: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+section.working-process-mobile > div.block-holder > div.block {
+  max-width: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-section.working-process-mobile>div.block-holder>div.block>div.block-text {
-    width: 80%;
-    max-width: 500px;
+section.working-process-mobile > div.block-holder > div.block > div.block-text {
+  width: 80%;
+  max-width: 500px;
 }
 
-section.working-process-mobile>div.block-holder>div.block>div.block-text>i {
-    font-size: 15vw;
+section.working-process-mobile
+  > div.block-holder
+  > div.block
+  > div.block-text
+  > i {
+  font-size: 15vw;
 }
 
-section.working-process-mobile>div.block-holder>div.block>div.block-text>span {
-    font-size: 5vw;
+section.working-process-mobile
+  > div.block-holder
+  > div.block
+  > div.block-text
+  > span {
+  font-size: 5vw;
 }
 
 @media screen and (min-width: 480px) {
-    div.card {
-        margin-right: 100px !important;
-        margin-left: 100px !important;
-    }
+  div.card {
+    margin-right: 100px !important;
+    margin-left: 100px !important;
+  }
 }
 
 @media screen and (min-width: 992px) {
-    div.card {
-        margin: 0 3% !important;
-    }
+  div.card {
+    margin: 0 3% !important;
+  }
 }
 
 @media screen and (max-width: 992px) {
-    #myCarousel {
-        width: 100%;
-    }
-    section.cards-holder>h1 {
-        font-size: 28px;
-    }
-    section.cards-holder>div.flex-center {
-        flex-direction: column;
-    }
-    section.cards-holder>div.flex-center div:nth-child(2) {
-        margin: 15px 0;
-    }
-    div.carousel-caption {
-        background-color: transparent;
-    }
-    div.carousel-caption>h3 {
-        font-size: 20px;
-    }
+  #myCarousel {
+    width: 100%;
+  }
+  section.cards-holder > h1 {
+    font-size: 28px;
+  }
+  section.cards-holder > div.flex-center {
+    flex-direction: column;
+  }
+  section.cards-holder > div.flex-center div:nth-child(2) {
+    margin: 15px 0;
+  }
+  div.carousel-caption {
+    background-color: transparent;
+  }
+  div.carousel-caption > h3 {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    section.working-process-mobile {
-        display: block;
-    }
-    section.working-process {
-        display: none;
-    }
+  section.working-process-mobile {
+    display: block;
+  }
+  section.working-process {
+    display: none;
+  }
 }
