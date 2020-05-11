@@ -6,9 +6,10 @@ use yii\helpers\Url;
 
 $product['photos'] = json_decode($product['photos'], true);
 
-?>
+$condition = $product['status'] != 'available';
 
-<div class="product">
+?>
+<div class="product <?= $condition ?: 'disabled' ?>">
     <a href="<?= Url::toRoute(['product', 'id' => $product['id']]) ?>">
         <?php
             if (isset($product['photos'][0])){
@@ -17,8 +18,9 @@ $product['photos'] = json_decode($product['photos'], true);
                 echo "<i class='fas fa-question-circle'></i>";
             } ?>
     </a>
+    <?= $condition ?: "<span class='disabled-text'>" . Yii::t('app', 'Sold Out') . "</span>" ?>
     <div>
         <a href="<?= Url::toRoute(['product', 'id' => $product['id']]) ?>"><?= $product['model'] ?></a>
-        <button>Order</button>
+        <button><?= $condition ? \Yii::t('app', 'Order') : \Yii::t('app', 'Read about') ?></button>
     </div>
 </div>

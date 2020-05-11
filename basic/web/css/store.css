@@ -1,67 +1,83 @@
 div.product {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid #cdcdcd;
-    width: 300px;
-    padding: 15px 15px 100px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #cdcdcd;
+  width: 300px;
+  padding: 15px 15px 100px;
 }
 
 div.product > div {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 div.product > div > a {
-    width: 260px;
-    overflow-wrap: break-word;
+  width: 260px;
+  overflow-wrap: break-word;
 }
 
+div.disabled > a > img {
+  filter: grayscale(60%);
+}
+
+span.disabled-text {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 0 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  font-size: 30px;
+  user-select: none;
+}
 
 div.product:hover {
-    border: 1px solid #20c997;
+  border: 1px solid #20c997;
 }
 
 div.product > div > button {
-    width: 90%;
-    visibility: hidden;
-    font-weight: 600;
-    background-color: transparent;
-    border: 3px solid #20c997;
-    margin: 15px 0;
+  width: 90%;
+  visibility: hidden;
+  font-weight: 600;
+  background-color: transparent;
+  border: 3px solid #20c997;
+  margin: 15px 0;
 }
 
 div.product > div > button:hover {
-    background-color: #20c997;
-    color: white;
+  background-color: #20c997;
+  color: white;
 }
 
-
 div.product:hover > div > button {
-    visibility: visible;
+  visibility: visible;
 }
 
 div.product > a {
-    font-weight: 600;
-    margin: 5px 0;
+  font-weight: 600;
+  margin: 5px 0;
 }
 
 div.product > a > img {
-    max-width: 250px;
-    max-height: 250px;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 i {
-    font-size: 250px;
+  font-size: 250px;
 }
 
 div.flex-center {
-    margin-top: 15px;
-    flex-wrap: wrap;
+  margin-top: 15px;
+  flex-wrap: wrap;
 }

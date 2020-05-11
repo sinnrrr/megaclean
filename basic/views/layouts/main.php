@@ -65,7 +65,7 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
         'items' => [
             ['label' => \Yii::t('app', 'Store'), 'url' => ['/products/store']],
             ['label' => \Yii::t('app', 'Order'), 'url' => ['/site/order']],
-            ['label' => \Yii::t('app', 'About us'), 'url' => ['/site/about']],
+            ['label' => \Yii::t('app', 'About Us'), 'url' => ['/site/about']],
             $languageItem->toArray()
         ],
     ]);

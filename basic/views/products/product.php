@@ -38,16 +38,19 @@ if (!empty($productInfo['photos'])) {
 </div>
 
 <div class="panel-group" id="accordion" style="margin-top: 30px; text-align: center">
+    <?php if (isset($productInfo['standard_equipment']) && !empty($productInfo['standard_equipment'])): ?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><?= \Yii::t('app', 'Standard equipment') ?></a>
             </h4>
         </div>
-        <div id="collapseOne" class="panel-collapse collapse in">
+        <div id="collapseOne" class="panel-collapse collapse">
             <?= $productInfo['standard_equipment'] ?>
         </div>
     </div>
+    <?php endif; ?>
+    <?php if (isset($productInfo['additional_equipment']) && !empty($productInfo['additional_equipment'])): ?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
@@ -55,9 +58,11 @@ if (!empty($productInfo['photos'])) {
             </h4>
         </div>
         <div id="collapseFour" class="panel-collapse collapse">
-            <?= $productInfo['technical_data'] ?>
+            <?= $productInfo['additional_equipment'] ?>
         </div>
     </div>
+    <?php endif; ?>
+    <?php if (isset($productInfo['technical_data']) && !empty($productInfo['technical_data'])): ?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
@@ -68,6 +73,7 @@ if (!empty($productInfo['photos'])) {
             <?= $productInfo['technical_data'] ?>
         </div>
     </div>
+    <?php endif; ?>
 </div>
 </div>
 <script>
@@ -75,5 +81,11 @@ if (!empty($productInfo['photos'])) {
         document.getElementsByClassName('product-holder')[0].style.flexDirection = 'column';
         document.getElementsByClassName('about')[0].style.margin = '30px 0 0 30px';
         document.getElementsByClassName('no-photo')[0].style.margin = '0 auto'
+    }
+
+    let panels = document.getElementsByClassName('panel-collapse')
+
+    if (typeof panels[0] != 'undefined') {
+        panels[0].classList.add('in')
     }
 </script>

@@ -6,6 +6,11 @@ use app\models\Products;
 /* @var $mode */
 /* @var $category */
 
+if (isset($category) && !empty($category)) {
+    $this->title = ucfirst($category) . ' | ' . 'Echo-Eko';
+} else {
+    $this->title = 'Store' . ' | ' . 'Echo-Eko';    
+}
 
 $products = Products::getFilteredProducts($mode, $category);
 

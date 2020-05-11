@@ -71,7 +71,7 @@ class Products extends \yii\db\ActiveRecord
 
     public static function getAllProducts(){
         return static::find()
-            ->select(['id', 'model', 'photos'])
+            ->select(['id', 'model', 'photos', 'status'])
             ->asArray()
             ->all();
     }
@@ -79,13 +79,13 @@ class Products extends \yii\db\ActiveRecord
     public static function getAllProductsByMode($mode){
         if ($mode == 'rent'){
             return static::find()
-                ->select(['id', 'model', 'photos'])
+                ->select(['id', 'model', 'photos', 'status'])
                 ->where(['is_rentable' => true])
                 ->asArray()
                 ->all();
         } else {
             return static::find()
-                ->select(['id', 'model', 'photos'])
+                ->select(['id', 'model', 'photos', 'status'])
                 ->where(['is_sellable' => true])
                 ->asArray()
                 ->all();
@@ -94,7 +94,7 @@ class Products extends \yii\db\ActiveRecord
 
     public static function getAllProductsByCategory($category){
         return static::find()
-            ->select(['id', 'model', 'photos'])
+            ->select(['id', 'model', 'photos', 'status'])
             ->where(["category" => $category])
             ->asArray()
             ->all();
@@ -103,13 +103,13 @@ class Products extends \yii\db\ActiveRecord
     public static function getAllProductsByCategoryAndMode($mode, $category){
         if ($mode == 'rent'){
             return static::find()
-                ->select(['id', 'model', 'photos'])
+                ->select(['id', 'model', 'photos', 'status'])
                 ->where(['is_rentable' => true, "category" => $category])
                 ->asArray()
                 ->all();
         } else {
             return static::find()
-                ->select(['id', 'model', 'photos'])
+                ->select(['id', 'model', 'photos', 'status'])
                 ->where(['is_sellable' => true, "category" => $category])
                 ->asArray()
                 ->all();
