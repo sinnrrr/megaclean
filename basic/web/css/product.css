@@ -7,10 +7,8 @@ div#w0 > a.gallery-item > img {
 div#w0 > a.gallery-item:first-child > img {
   display: block;
   max-width: 500px;
-}
-
-div#w0 > a.gallery-item:hover > img {
-  animation: 1s ease-in-out jello;
+  max-height: 400px;
+  margin-bottom: 15px;
 }
 
 div.product-holder {
@@ -66,12 +64,15 @@ a.order-button {
   letter-spacing: 1px;
   font-size: 24px;
   border-radius: 5px;
-  margin-top: 15px;
   padding: 5px 0;
   user-select: none;
   width: 60%;
   min-width: 200px;
   margin: 15px auto;
+}
+
+ul {
+  text-align: left !important;
 }
 
 a.order-button:hover {

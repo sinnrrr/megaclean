@@ -5,18 +5,17 @@ use app\models\Products;
 /* @var $this \yii\web\View */
 /* @var $mode */
 
-$this->title = 'Echo-Eko | Store';
+$this->title = Yii::t('app', 'Store') . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/select.css');
 
 $productsAvailable = [];
 $listOfProducts = [
     0 => 'biotoilets',
     1 => 'washbasins',
-    2 => 'urinals',
-    3 => 'handstands',
-    4 => 'showers',
-    5 => 'plumbing_modules',
-    6 => 'garbage_containers'
+    2 => 'handstands',
+    3 => 'showers',
+    4 => 'plumbing_modules',
+    5 => 'garbage_containers'
 ];
 
 switch ($mode) {

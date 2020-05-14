@@ -16,7 +16,7 @@ if (class_exists('yii\debug\Module')) {
     $this->off(\yii\web\View::EVENT_END_BODY, [\yii\debug\Module::getInstance(), 'renderToolbar']);
 }
 
-Yii::$app->name = 'Echo-Eko';
+Yii::$app->name = 'Megaclean';
 
 AppAsset::register($this);
 
@@ -83,7 +83,7 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
 
 <footer class="footer">
     <div class="container">
-        <p class="text-center">&copy; Echo-Eko <?= date('Y') ?></p>
+        <p class="text-center">&copy; Megaclean <?= date('Y') ?></p>
     </div>
 </footer>
 

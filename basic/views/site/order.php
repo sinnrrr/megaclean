@@ -8,7 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'Order | Echo-Eko';
+$this->title = Yii::t('app', 'Order') . ' | ' . Yii::$app->name;
 ?>
 <div class="site-contact">
     <h1><?= \Yii::t('app', 'Order') ?></h1>

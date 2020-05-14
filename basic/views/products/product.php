@@ -8,7 +8,7 @@ use app\models\Products;
 
 $productInfo = Products::getProductById($id);
 
-$this->title = $productInfo['model'];
+$this->title = $productInfo['model'] . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/product.css');
 $this->registerCssFile('@web/css/all.min.css');
 
@@ -27,7 +27,8 @@ if (!empty($productInfo['photos'])) {
     <?php if (isset($galleryItems)) {
         echo dosamigos\gallery\Gallery::widget(['items' => $galleryItems]);
     } else {
-        echo '<div class="no-photo"><i class="fas fa-image"></i><span>No photo</span></div>';
+        $noPhoto = "<div class='no-photo'><i class='fas fa-image'></i><span>" . Yii::t('app', 'No photo') . "</span></div>";
+        echo  $noPhoto;
     }
     ?>
     <div class="about">

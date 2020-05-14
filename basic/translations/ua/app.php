@@ -31,6 +31,7 @@ return [
     'Order' => 'Замовити',
     'Read about' => 'Подивитись',
     'Sold Out' => 'Продано',
+    'No photo' => 'Немає фото',
     'Standard equipment' => 'Стандартне обладнання',
     'Technical data' => 'Технічні дані',
     'Additional equipment' => 'Додаткове обладнання',

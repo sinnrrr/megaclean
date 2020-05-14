@@ -7,9 +7,9 @@ use app\models\Products;
 /* @var $category */
 
 if (isset($category) && !empty($category)) {
-    $this->title = ucfirst($category) . ' | ' . 'Echo-Eko';
+    $this->title = ucfirst(Yii::t('app', ucfirst($category))) . ' | ' . Yii::$app->name;
 } else {
-    $this->title = 'Store' . ' | ' . 'Echo-Eko';    
+    $this->title = Yii::t('app', 'Store') . ' | ' . Yii::$app->name;    
 }
 
 $products = Products::getFilteredProducts($mode, $category);

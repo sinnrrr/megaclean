@@ -21,6 +21,7 @@ div.product > div {
 div.product > div > a {
   width: 260px;
   overflow-wrap: break-word;
+  font-weight: 800;
 }
 
 div.disabled > a > img {

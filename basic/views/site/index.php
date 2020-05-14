@@ -4,7 +4,7 @@ use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 
-$this->title = 'Echo-Eko';
+$this->title = Yii::$app->name;
 $this->registerCssFile('@web/css/index.css');
 $this->registerCssFile("@web/css/all.min.css");
 

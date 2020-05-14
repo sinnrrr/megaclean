@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About Us | Echo-Eko';
+$this->title = Yii::t('app', 'About Us') . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/about.css');
 
 ?>

@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=127.0.0.1;dbname=echo-eko',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=megaclean',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',

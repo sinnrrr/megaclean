@@ -37,8 +37,8 @@ class Products extends \yii\db\ActiveRecord
     {
         return [
             [['category', 'photos', 'description', 'standard_equipment', 'technical_data', 'additional_equipment', 'status'], 'string'],
-            [['category', 'model', 'description', 'standard_equipment', 'technical_data', 'status'], 'required'],
-            [['photos'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 4],
+            [['category', 'model', 'description', 'status'], 'required'],
+            [['photos'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, webp', 'maxFiles' => 4],
             [['is_rentable', 'is_sellable'], 'integer'],
             [['model', 'review_link'], 'string', 'max' => 255],
         ];
