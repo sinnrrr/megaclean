@@ -65,21 +65,19 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
         'items' => [
             ['label' => \Yii::t('app', 'Store'), 'url' => ['/products/store']],
             ['label' => \Yii::t('app', 'Order'), 'url' => ['/site/order']],
-            ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
+            ['label' => \Yii::t('app', 'About Us'), 'url' => ['/site/about']],
             $languageItem->toArray()
         ],
     ]);
     NavBar::end();
     ?>
 
-    <div class="wrapper">
+
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
-    </div>
-
 </div>
 
 <footer class="footer">

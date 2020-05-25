@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
+
 /* @var $model app\models\ContactForm */
 
 use yii\helpers\Html;
@@ -11,8 +12,6 @@ use yii\captcha\Captcha;
 $this->title = Yii::t('app', 'Order') . ' | ' . Yii::$app->name;
 ?>
 <div class="site-contact">
-    <h1><?= \Yii::t('app', 'Order') ?></h1>
-
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
         <div class="alert alert-success">
@@ -25,40 +24,38 @@ $this->title = Yii::t('app', 'Order') . ' | ' . Yii::$app->name;
             <?php if (Yii::$app->mailer->useFileTransport): ?>
                 Because the application is in development mode, the email is not sent but saved as
                 a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                Please configure the <code>useFileTransport</code> property of the <code>mail</code>
+                                                                                                    Please configure the
+                <code>useFileTransport</code> property of the <code>mail</code>
                 application component to be false to enable email sending.
             <?php endif; ?>
         </p>
 
     <?php else: ?>
+        <div class="flex-center" style="flex-direction: column; padding: 0 15px">
+            <h1><?= \Yii::t('app', 'Order') ?></h1>
+            <p><?= \Yii::t('app',
+                    'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?></p>
+        </div>
+        <div style="padding: 30px; max-width: 1000px; margin: 0 auto;">
+            <?php $form = ActiveForm::begin(['id' => 'contact-form', 'class' => 'flex-center']); ?>
 
-        <p><?= \Yii::t('app',
-         'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?></p>
+            <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
 
-        <div class="row">
-            <div class="col-lg-5">
+            <?= $form->field($model, 'email') ?>
 
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+            <?= $form->field($model, 'subject') ?>
 
-                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+            <?= $form->field($model, 'body')->textarea(['rows' => 12]) ?>
 
-                    <?= $form->field($model, 'email') ?>
+            <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+            ]) ?>
 
-                    <?= $form->field($model, 'subject') ?>
-
-                    <?= $form->field($model, 'body')->textarea(['rows' => 12]) ?>
-
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
-
-                    <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                    </div>
-
-                <?php ActiveForm::end(); ?>
-
+            <div class="form-group">
+                <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
             </div>
+
+            <?php ActiveForm::end(); ?>
         </div>
 
     <?php endif; ?>

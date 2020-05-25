@@ -16,24 +16,22 @@ div.product-holder {
   margin-top: 60px;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
 }
 
 div.about {
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
-  margin-top: 30px;
   word-break: break-word;
-}
-
-div.about > span {
-  font-size: 24px;
+  padding: 0 30px;
 }
 
 div.about > h1 {
   margin-top: 0;
   border-bottom: 3px solid #20c997;
+}
+
+div.about > div {
+  font-size: 20px;
 }
 
 div.no-photo {
@@ -69,6 +67,7 @@ a.order-button {
   width: 60%;
   min-width: 200px;
   margin: 15px auto;
+  text-align: center;
 }
 
 ul {
@@ -115,10 +114,15 @@ div.panel-default {
 @media screen and (max-width: 992px) {
   div.product-holder {
     justify-content: center;
-    text-align: center;
     margin-top: 15px;
   }
   div.about > h1 {
     margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  div.about {
+    padding: 0 120px;
   }
 }

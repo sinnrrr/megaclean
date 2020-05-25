@@ -30,6 +30,8 @@ function renderBrands()
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -54,6 +56,20 @@ function renderBrands()
                     </div>
                     <img src="/basic/web/img/carousel/military.jpg" alt="">
                 </div>
+
+                <div class="item">
+                    <div class="carousel-caption">
+                        <h3><?= \Yii::t('app', 'Parking') ?></h3>
+                    </div>
+                    <img src="/basic/web/img/carousel/parking.png" alt="">
+                </div>
+
+                <div class="item">
+                    <div class="carousel-caption">
+                        <h3><?= \Yii::t('app', 'Competitions') ?></h3>
+                    </div>
+                    <img src="/basic/web/img/carousel/competitions.png" alt="">
+                </div>
             </div>
 
             <!-- Left and right controls -->
@@ -69,8 +85,8 @@ function renderBrands()
     </div>
     <hr>
     <section class="cards-holder">
-        <h1><?= \Yii::t('app', 'We render services at rent and upkeep for mobile sanitary systems') ?></h1>
-        <div class="flex-center">
+        <h1><?= \Yii::t('app', 'We provide a full range of services related to mobile sanitation systems') ?></h1>
+        <div class="flex-center" style="flex-wrap: wrap">
             <div class="card">
                 <a href="<?= Url::toRoute(['products/select', 'mode' => 'rent']) ?>"
                    class="fas fa-person-dolly card-icon"></a>
@@ -88,7 +104,7 @@ function renderBrands()
         </div>
     </section>
     <section class="working-process">
-        <h1 class="text-center"><?= \Yii::t('app', 'Working process') ?></h1>
+        <h1 class="text-center"><?= \Yii::t('app', 'Algorithm of work') ?></h1>
         <div class="block-holder">
             <div class="block">
                 <span class="block-number">1</span>
@@ -109,6 +125,18 @@ function renderBrands()
                     </div>
                 </div>
             </div>
+<!--            <div class="block-wrap">-->
+<!--                <div class="arrow">-->
+<!--                    <i class="fas fa-arrow-right"></i>-->
+<!--                </div>-->
+<!--                <div class="block">-->
+<!--                    <span class="block-number">3</span>-->
+<!--                    <div class="block-text">-->
+<!--                        <i class="fas fa-truck"></i>-->
+<!--                        <span>--><?//= \Yii::t('app', 'Delivery') ?><!--</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <div class="block-wrap">
                 <div class="arrow">
                     <i class="fas fa-arrow-right"></i>
@@ -116,8 +144,9 @@ function renderBrands()
                 <div class="block">
                     <span class="block-number">3</span>
                     <div class="block-text">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-forklift"></i>
                         <span><?= \Yii::t('app', 'Delivery') ?></span>
+                        <span><?= \Yii::t('app', 'Assembling') ?></span>
                     </div>
                 </div>
             </div>
@@ -128,8 +157,20 @@ function renderBrands()
                 <div class="block">
                     <span class="block-number">4</span>
                     <div class="block-text">
-                        <i class="fas fa-forklift"></i>
-                        <span><?= \Yii::t('app', 'Assembling') ?></span>
+                        <i class="fas fa-broom"></i>
+                        <span><?= \Yii::t('app', 'Service') ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="block-wrap">
+                <div class="arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="block">
+                    <span class="block-number">5</span>
+                    <div class="block-text">
+                        <i class="fas fa-wrench"></i>
+                        <span><?= \Yii::t('app', 'Dismantling') ?></span>
                     </div>
                 </div>
             </div>
@@ -161,8 +202,10 @@ function renderBrands()
             <div class="block">
                 <span class="block-number">3</span>
                 <div class="block-text">
-                    <i class="fas fa-truck"></i>
+                    <i class="fas fa-forklift"></i>
                     <span><?= \Yii::t('app', 'Delivery') ?></span>
+
+                    <span><?= \Yii::t('app', 'Assembling') ?></span>
                 </div>
             </div>
             <div class="arrow">
@@ -171,14 +214,38 @@ function renderBrands()
             <div class="block">
                 <span class="block-number">4</span>
                 <div class="block-text">
-                    <i class="fas fa-forklift"></i>
-                    <span><?= \Yii::t('app', 'Assembling') ?></span>
+                    <i class="fas fa-broom"></i>
+                    <span><?= \Yii::t('app', 'Service') ?></span>
+                </div>
+            </div>
+            <div class="arrow">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+            <div class="block">
+                <span class="block-number">5</span>
+                <div class="block-text">
+                    <i class="fas fa-wrench"></i>
+                    <span><?= \Yii::t('app', 'Dismantling') ?></span>
                 </div>
             </div>
         </div>
     </section>
+    <section class="about">
+        <h1><?= \Yii::t('app', 'About Us') ?></h1>
+
+        <img src="/basic/web/img/index/about.jpg" alt="">
+        <p><?= \Yii::t('app', "With more than 9 years of experience in the field of portable sanitation, Megaclean has built an impeccable reputation in the field of rental and maintenance of mobile sanitary systems, which meets and exceeds the needs of our customers.") ?></p>
+
+        <p><?= \Yii::t('app', "The use of portable toilets (bio toilets), washbasins and other sanitary equipment of well-known world brands for rent is a major step forward, made thanks to all the useful advice of many customers. During operation, our equipment can withstand constant loads and even abuse, but it is easy to clean and maintain, which creates a comfortable environment for both users and operators.") ?></p>
+
+        <p><?= \Yii::t('app', "Do you need extremely high-quality service of dry closets? We have this standard thanks to extensive experience and practice in combination with the use of modern revolutionary reagents and special equipment.") ?></p>
+
+        <p><?= \Yii::t('app', "As a result - you get quality rental services for mobile sanitation systems, and we in turn - a satisfied user and confidence that our work is useful for you and for the environment in which we spend our lives.") ?></p>
+
+        <p><?= \Yii::t('app', "So, we are waiting for your orders and will be happy to advise in the field of portable sanitation.") ?></p>
+    </section>
     <section class="brands">
-        <h3><?= Yii::t('app', 'We cooperate with leading global companies') ?></h3>
+        <h1><?= Yii::t('app', 'We cooperate with leading global companies') ?></h1>
         <div class="brand-logos">
             <?= renderBrands() ?>
         </div>

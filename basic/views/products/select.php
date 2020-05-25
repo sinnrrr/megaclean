@@ -14,9 +14,13 @@ $listOfProducts = [
     1 => 'washbasins',
     2 => 'handstands',
     3 => 'showers',
-    4 => 'plumbing_modules',
-    5 => 'garbage_containers'
+    4 => 'urinals',
+    5 => 'plumbing_modules',
+    6 => 'garbage_containers',
+    7 => 'disinfecting_racks'
 ];
+
+
 
 switch ($mode) {
     case 'sale':
@@ -51,7 +55,8 @@ foreach ($listOfProducts as $variant) {
                 'mode' => $mode,
                 'category' => $category,
                 'image' => $image,
-                'title' => $title
+                'title' => $title,
+                'productName' => $productName
             ]);
         }
         ?>

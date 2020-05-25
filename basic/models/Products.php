@@ -36,8 +36,8 @@ class Products extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category', 'photos', 'description', 'standard_equipment', 'technical_data', 'additional_equipment', 'status'], 'string'],
-            [['category', 'model', 'description', 'status'], 'required'],
+            [['category', 'photos', 'description', 'standard_equipment', 'technical_data', 'additional_equipment', 'manufacture', 'status'], 'string'],
+            [['category', 'model', 'description', 'status', 'manufacture'], 'required'],
             [['photos'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, webp', 'maxFiles' => 4],
             [['is_rentable', 'is_sellable'], 'integer'],
             [['model', 'review_link'], 'string', 'max' => 255],
@@ -59,6 +59,7 @@ class Products extends \yii\db\ActiveRecord
             'technical_data' => 'Technical Data',
             'additional_equipment' => 'Additional Equipment',
             'review_link' => 'Review Link',
+            'manufacture' => 'Manufacture',
             'is_rentable' => 'Is Rentable',
             'is_sellable' => 'Is Sellable',
             'status' => 'Status',

@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<div class="products-view">
+<div class="products-view" style="padding: 60px">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -40,6 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'technical_data:ntext',
             'additional_equipment:ntext',
             'review_link',
+            'manufacture',
             'is_rentable',
             'is_sellable',
             'status',

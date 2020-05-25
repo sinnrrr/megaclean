@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'category')->dropDownList(['biotoilets' => 'Biotoilets', 'washbasins' => 'Washbasins', 'urinals' => 'Urinals', 'handstands' => 'Handstands', 'showers' => 'Showers', 'plumbing_modules' => 'Plumbing modules', 'garbage_containers' => 'Garbage containers',], ['prompt' => '']) ?>
+    <?= $form->field($model, 'category')->dropDownList(['biotoilets' => 'Biotoilets', 'washbasins' => 'Washbasins', 'urinals' => 'Urinals', 'handstands' => 'Handstands', 'showers' => 'Showers', 'plumbing_modules' => 'Plumbing modules', 'garbage_containers' => 'Garbage containers', 'disinfecting_racks' => 'Disinfecting racks'], ['prompt' => '']) ?>
 
     <?= $form->field($model, 'model')->textInput(['maxlength' => true]) ?>
 
@@ -28,6 +28,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'additional_equipment')->textarea(['rows' => 6, 'id' => 'editor4']) ?>
 
     <?= $form->field($model, 'review_link')->textInput(['maxlength' => true, 'placeholder' => 'not required']) ?>
+
+    <?= $form->field($model, 'manufacture')->dropDownList(['Ukraine' => 'Ukraine', 'Germany' => 'Germany', 'USA' => 'USA']) ?>
 
     <?= $form->field($model, 'is_rentable')->dropDownList([true => 'true', false => 'false']) ?>
 

@@ -1,3 +1,7 @@
+div.site-store {
+  padding: 15px;
+}
+
 div.product {
   display: flex;
   position: relative;

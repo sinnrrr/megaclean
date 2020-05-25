@@ -14,7 +14,7 @@ class m200317_230454_create_table_products extends Migration
     {
         $this->createTable('products', [
             'id' => $this->primaryKey()->unsigned(),
-            'category' => "ENUM('biotoilets','washbasins','handstands','showers','plumbing_modules','garbage_containers')",
+            'category' => "ENUM('biotoilets','washbasins','handstands','showers','urinals','plumbing_modules','garbage_containers', 'disinfecting_racks')",
             'model' => $this->string()->notNull(),
             'photos' => $this->text(),
             'description' => $this->text()->notNull(),
@@ -22,6 +22,7 @@ class m200317_230454_create_table_products extends Migration
             'technical_data' => $this->text(),
             'additional_equipment' => $this->text(),
             'review_link' => $this->string(),
+            'manufacture' => $this->string()->notNull(),
             'is_rentable' => $this->boolean()->defaultValue(false)->notNull(),
             'is_sellable' => $this->boolean()->defaultValue(false)->notNull(),
             'status' => "ENUM('available','sold_out','disabled')"

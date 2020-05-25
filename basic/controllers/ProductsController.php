@@ -42,7 +42,7 @@ class ProductsController extends Controller
                 }
                 $model->photos = json_encode($images);
             } else {
-                $model->photos = '';
+                unset($model->photos);
             }
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);

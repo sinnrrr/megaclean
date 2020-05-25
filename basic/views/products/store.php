@@ -6,8 +6,10 @@ use app\models\Products;
 /* @var $mode */
 /* @var $category */
 
+
 if (isset($category) && !empty($category)) {
-    $this->title = ucfirst(Yii::t('app', ucfirst($category))) . ' | ' . Yii::$app->name;
+    $productName = preg_replace('/_/', ' ', $category);
+    $this->title = ucfirst(Yii::t('app', ucfirst($productName))) . ' | ' . Yii::$app->name;
 } else {
     $this->title = Yii::t('app', 'Store') . ' | ' . Yii::$app->name;    
 }
@@ -20,7 +22,7 @@ $this->registerCssFile('@web/css/all.min.css');
 ?>
 
 <div class="site-store">
-    <h1 class="text-center"><?= empty($category) ? \Yii::t('app', 'Store') : \Yii::t('app', ucfirst($category)) ?></h1>
+    <h1 class="text-center"><?= empty($category) ? \Yii::t('app', 'Store') : \Yii::t('app', ucfirst($productName)) ?></h1>
     <div class="flex-center">
         <?php
         foreach ($products as $product){

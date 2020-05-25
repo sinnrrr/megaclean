@@ -156,3 +156,7 @@ button.logout {
 .grid-view td .wrap {
     white-space: pre-wrap;
 }
+
+div.wrapper {
+    margin-top: 75px;
+}

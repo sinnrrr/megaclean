@@ -11,7 +11,7 @@ $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
-<div class="products-index">
+<div class="products-index" style="padding: 60px">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
