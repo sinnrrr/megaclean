@@ -99,7 +99,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays contact page.
+     * Displays order page.
      *
      * @return Response|string
      */
@@ -117,12 +117,22 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
+     * Displays contact page.
      *
      * @return string
      */
     public function actionContact()
     {
         return $this->render('contact');
+    }
+
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionService()
+    {
+        return $this->render('service');
     }
 }

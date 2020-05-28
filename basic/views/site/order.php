@@ -33,7 +33,7 @@ $this->title = Yii::t('app', 'Order') . ' | ' . Yii::$app->name;
     <?php else: ?>
         <div class="flex-center" style="flex-direction: column; padding: 0 15px">
             <h1><?= \Yii::t('app', 'Order') ?></h1>
-            <p><?= \Yii::t('app',
+            <p><?= \Yii::t('order',
                     'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?></p>
         </div>
         <div style="padding: 30px; max-width: 1000px; margin: 0 auto;">

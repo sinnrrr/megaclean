@@ -53,7 +53,7 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse',
         ],
     ]);
     ?>
@@ -84,7 +84,7 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
 
 <footer class="footer">
     <div class="container">
-        <p class="text-center">&copy; Megaclean <?= date('Y') ?></p>
+        <p class="text-center">&copy; <?= Yii::$app->name ?> <?= date('Y') ?></p>
     </div>
 </footer>
 

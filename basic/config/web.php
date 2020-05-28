@@ -11,7 +11,7 @@ $config = [
     'language' => 'ua',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
@@ -28,21 +28,21 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'transport' => [
-                'class' => 'Swift_SmtpTransport',
-                'host' => 'smtp.gmail.com',
-                'username' => 'dimasoltusyuk@gmail.com',
-                'password' => 'PCI7135gotview',
-                'port' => '465',
-                'encryption' => 'tls',
-            ],
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => false,
-        ],
+//        'mailer' => [
+//            'class' => 'yii\swiftmailer\Mailer',
+//            'transport' => [
+//                'class' => 'Swift_SmtpTransport',
+//                'host' => 'smtp.gmail.com',
+//                'username' => '',
+//                'password' => '',
+//                'port' => '465',
+//                'encryption' => 'tls',
+//            ],
+//            // send all mails to a file by default. You have to set
+//            // 'useFileTransport' to false and configure a transport
+//            // for the mailer to send real emails.
+//            'useFileTransport' => false,
+//        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -54,12 +54,39 @@ $config = [
         ],
         'i18n' => [
             'translations' => [
-                'app*' => [
+                'app' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@app/translations',
                     'sourceLanguage' => 'en',
                     'fileMap' => [
                         'app' => 'app.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+                'about' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/translations',
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        'app' => 'about.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+                'order' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/translations',
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        'app' => 'order.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+                'service' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/translations',
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        'app' => 'service.php',
                         'app/error' => 'error.php',
                     ],
                 ],
