@@ -4,9 +4,9 @@
 
 /* @var $id */
 
-use app\models\Products;
+use app\models\Product;
 
-$productInfo = Products::getProductById($id);
+$productInfo = Product::getProductById($id);
 
 $this->title = $productInfo['model'] . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/product.css');

@@ -75,4 +75,13 @@ return array (
       '@dosamigos/gallery' => $vendorDir . '/2amigos/yii2-gallery-widget/src',
     ),
   ),
+  'devanych/yii2-cart' => 
+  array (
+    'name' => 'devanych/yii2-cart',
+    'version' => '1.2.5.0',
+    'alias' => 
+    array (
+      '@devanych/cart' => $vendorDir . '/devanych/yii2-cart',
+    ),
+  ),
 );

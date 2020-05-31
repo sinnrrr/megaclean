@@ -20,7 +20,7 @@ use Yii;
  * @property int $is_sellable
  * @property string|null $status
  */
-class Products extends \yii\db\ActiveRecord
+class Product extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}

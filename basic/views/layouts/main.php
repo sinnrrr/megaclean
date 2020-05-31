@@ -30,6 +30,57 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
     'options' => ['encode' => false],
 ]);
 
+$currentUrl = Url::current();
+
+$this->registerJs("
+    const popup = document.getElementById('popup');
+    let notify = document.getElementById('notify');
+
+    function removePopup() {
+        popup.className = 'remove';
+    }
+
+    function removeUrlRubbish() { 
+        let sliceCount = -6; // default for add message
+        let lastCharacters = window.location.href.substr(window.location.href.length -3)
+    
+        if (lastCharacters != 'add') {
+            // change or delete message
+            sliceCount = -9;
+        }
+    
+        window.history.replaceState({}, document.title, window.location.href.slice(0, sliceCount));
+    }
+
+    function displayNotify(message) {
+        removeUrlRubbish();
+    
+        notify.innerText = message;
+        popup.className = 'show';
+        setTimeout(removePopup, 3000);
+    }
+");
+
+$m = Yii::$app->request->get('m');
+
+if (!empty($m)) {
+    switch ($m) {
+        case 'add':
+            $message = 'Item successfully added to cart';
+            break;
+        case 'change':
+            $message = 'Quantity of this good has been changed';
+            break;
+        case 'delete':
+            $message = 'This item has been successfully deleted from the cart';
+            break;
+    }
+
+    $message = Yii::t('app', $message);
+
+    $this->registerJs("displayNotify('{$message}')");
+}
+
 ?>
 
 <?php $this->beginPage() ?>
@@ -45,6 +96,9 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
     <?php $this->head() ?>
 </head>
 <body>
+<div id="popup">
+    <p id="notify"></p>
+</div>
 <?php $this->beginBody() ?>
 
 <div class="wrap">
@@ -65,8 +119,9 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
         'items' => [
             ['label' => \Yii::t('app', 'Store'), 'url' => ['/products/store']],
             ['label' => \Yii::t('app', 'Order'), 'url' => ['/site/order']],
-            ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
-            $languageItem->toArray()
+//            ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/order']],
+            ['label' => \Yii::t('app', 'Cart'), 'url' => ['/site/cart']],
+            $languageItem->toArray(),
         ],
     ]);
     NavBar::end();

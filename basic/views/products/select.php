@@ -1,6 +1,6 @@
 <?php
 
-use app\models\Products;
+use app\models\Product;
 
 /* @var $this \yii\web\View */
 /* @var $mode */
@@ -24,10 +24,10 @@ $listOfProducts = [
 
 switch ($mode) {
     case 'sale':
-        $products = Products::find()->select('category')->where(['is_sellable' => true])->asArray()->all();
+        $products = Product::find()->select('category')->where(['is_sellable' => true])->asArray()->all();
         break;
     case 'rent':
-        $products = Products::find()->select('category')->where(['is_rentable' => true])->asArray()->all();
+        $products = Product::find()->select('category')->where(['is_rentable' => true])->asArray()->all();
         break;
 }
 
@@ -42,14 +42,14 @@ foreach ($listOfProducts as $variant) {
 ?>
 
 <div class="site-select">
-    <h1 style="text-align: center"><?= \Yii::t('app', 'Choose category:') ?></h1>
+    <h1 style="text-align: center"><?= \Yii::t('select', 'Choose category:') ?></h1>
     <div class="flex-center" style="flex-wrap: wrap">
         <?php
         foreach ($productsAvailable as $product) {
             $category = $product;
             $productName = preg_replace('/_/', ' ', $product);
             $image = '/basic/web/img/category/' . $product . ".jpg";
-            $title = \Yii::t('app', ucfirst($productName));
+            $title = \Yii::t('select', ucfirst($productName));
 
             echo $this->render('_category', [
                 'mode' => $mode,

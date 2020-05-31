@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Products;
+use app\models\Product;
 
 /**
- * ProductsSearch represents the model behind the search form of `app\models\Products`.
+ * ProductSearch represents the model behind the search form of `app\models\Product`.
  */
-class ProductsSearch extends Products
+class ProductSearch extends Product
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class ProductsSearch extends Products
      */
     public function search($params)
     {
-        $query = Products::find();
+        $query = Product::find();
 
         // add conditions that should always apply here
 

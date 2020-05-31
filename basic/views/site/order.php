@@ -5,38 +5,33 @@
 
 /* @var $model app\models\ContactForm */
 
+use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = Yii::t('app', 'Order') . ' | ' . Yii::$app->name;
+$this->registerCssFile('@web/css/order.css');
+
 ?>
+
 <div class="site-contact">
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
-
+    <div class="success-email">
         <div class="alert alert-success">
-            Thank you for contacting us. We will respond to you as soon as possible.
+            <?= Yii::t('order', 'Thank you for contacting us. We will respond to you as soon as possible.') ?>
         </div>
-
-        <p>
-            Note that if you turn on the Yii debugger, you should be able
-            to view the mail message on the mail panel of the debugger.
-            <?php if (Yii::$app->mailer->useFileTransport): ?>
-                Because the application is in development mode, the email is not sent but saved as
-                a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                                                                                                    Please configure the
-                <code>useFileTransport</code> property of the <code>mail</code>
-                application component to be false to enable email sending.
-            <?php endif; ?>
-        </p>
-
+        <a href="<?= Url::toRoute('products/store') ?>" class="btn btn-primary">
+            <?= Yii::t('order', 'Look at other goods') ?>
+        </a>
+    </div>
     <?php else: ?>
-        <div class="flex-center" style="flex-direction: column; padding: 0 15px">
+        <div class="flex-center">
             <h1><?= \Yii::t('app', 'Order') ?></h1>
             <p><?= \Yii::t('order',
                     'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?></p>
         </div>
-        <div style="padding: 30px; max-width: 1000px; margin: 0 auto;">
+        <div class="email-form">
             <?php $form = ActiveForm::begin(['id' => 'contact-form', 'class' => 'flex-center']); ?>
 
             <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>

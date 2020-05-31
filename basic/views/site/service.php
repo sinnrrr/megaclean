@@ -1,15 +1,4 @@
-<?php
-
-use yii\helpers\Url;
-
-/* @var $this yii\web\View */
-
-$this->title = Yii::t('app', 'Service') . ' | ' . Yii::$app->name;
-
-$this->registerCssFile('@web/css/service.css');
-$this->registerCssFile('@web/css/all.min.css');
-
-?>
+<?php $this->title = Yii::t('app', 'Service') . ' | ' . Yii::$app->name ?>
 
 <div class="site-service">
     <div style="width: 80% !important; margin: auto auto;">

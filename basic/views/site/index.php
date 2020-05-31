@@ -38,35 +38,35 @@ function renderBrands()
             <div class="carousel-inner">
                 <div class="item active">
                     <div class="carousel-caption">
-                        <h3><?= \Yii::t('app', 'Festivals and events') ?></h3>
+                        <h3><?= \Yii::t('index', 'Festivals and events') ?></h3>
                     </div>
                     <img src="/basic/web/img/carousel/festivals.jpg" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
-                        <h3><?= \Yii::t('app', 'Constructions') ?></h3>
+                        <h3><?= \Yii::t('index', 'Constructions') ?></h3>
                     </div>
                     <img src="/basic/web/img/carousel/construction.png" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
-                        <h3><?= \Yii::t('app', 'Military educations') ?></h3>
+                        <h3><?= \Yii::t('index', 'Military educations') ?></h3>
                     </div>
                     <img src="/basic/web/img/carousel/military.jpg" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
-                        <h3><?= \Yii::t('app', 'Parking') ?></h3>
+                        <h3><?= \Yii::t('index', 'Parking') ?></h3>
                     </div>
                     <img src="/basic/web/img/carousel/parking.png" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
-                        <h3><?= \Yii::t('app', 'Competitions') ?></h3>
+                        <h3><?= \Yii::t('index', 'Competitions') ?></h3>
                     </div>
                     <img src="/basic/web/img/carousel/competitions.png" alt="">
                 </div>
@@ -85,32 +85,32 @@ function renderBrands()
     </div>
     <hr>
     <section class="cards-holder">
-        <h1><?= \Yii::t('app', 'We provide a full range of services related to mobile sanitation systems') ?></h1>
+        <h1><?= \Yii::t('index', 'We provide a full range of services related to mobile sanitation systems') ?></h1>
         <div class="flex-center" style="flex-wrap: wrap">
             <div class="card">
                 <a href="<?= Url::toRoute(['products/select', 'mode' => 'rent']) ?>"
                    class="fas fa-person-dolly card-icon"></a>
-                <a href="<?= Url::toRoute(['products/select', 'mode' => 'rent']) ?>"><?= \Yii::t('app', 'Rent') ?></a>
+                <a href="<?= Url::toRoute(['products/select', 'mode' => 'rent']) ?>"><?= \Yii::t('index', 'Rent') ?></a>
             </div>
             <div class="card">
                 <a href="<?= Url::toRoute('site/service') ?>" class="fas fa-recycle card-icon"></a>
-                <a href="<?= Url::toRoute('site/service') ?>"><?= \Yii::t('app', 'Service') ?></a>
+                <a href="<?= Url::toRoute('site/service') ?>"><?= \Yii::t('index', 'Service') ?></a>
             </div>
             <div class="card">
                 <a href="<?= Url::toRoute(['products/select', 'mode' => 'sale']) ?>"
                    class="fas fa-shopping-cart card-icon" style="padding-left: 30px;"></a>
-                <a href="<?= Url::toRoute(['products/select', 'mode' => 'sale']) ?>"><?= \Yii::t('app', 'Sale') ?></a>
+                <a href="<?= Url::toRoute(['products/select', 'mode' => 'sale']) ?>"><?= \Yii::t('index', 'Sale') ?></a>
             </div>
         </div>
     </section>
     <section class="working-process">
-        <h1 class="text-center"><?= \Yii::t('app', 'Algorithm of work') ?></h1>
+        <h1 class="text-center"><?= \Yii::t('index', 'Algorithm of work') ?></h1>
         <div class="block-holder">
             <div class="block">
                 <span class="block-number">1</span>
                 <div class="block-text">
                     <i class="fas fa-phone-alt"></i>
-                    <span><?= \Yii::t('app', 'Call') ?></span>
+                    <span><?= \Yii::t('index', 'Call') ?></span>
                 </div>
             </div>
             <div class="block-wrap">
@@ -121,7 +121,7 @@ function renderBrands()
                     <span class="block-number">2</span>
                     <div class="block-text">
                         <i class="fas fa-file-alt"></i>
-                        <span><?= \Yii::t('app', 'Contract') ?></span>
+                        <span><?= \Yii::t('index', 'Contract') ?></span>
                     </div>
                 </div>
             </div>
@@ -133,8 +133,8 @@ function renderBrands()
                     <span class="block-number">3</span>
                     <div class="block-text">
                         <i class="fas fa-forklift"></i>
-                        <span><?= \Yii::t('app', 'Delivery') ?></span>
-                        <span><?= \Yii::t('app', 'Assembling') ?></span>
+                        <span><?= \Yii::t('index', 'Delivery') ?></span>
+                        <span><?= \Yii::t('index', 'Assembling') ?></span>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@ function renderBrands()
                     <span class="block-number">4</span>
                     <div class="block-text">
                         <i class="fas fa-broom"></i>
-                        <span><?= \Yii::t('app', 'Service') ?></span>
+                        <span><?= \Yii::t('index', 'Service') ?></span>
                     </div>
                 </div>
             </div>
@@ -158,20 +158,20 @@ function renderBrands()
                     <span class="block-number">5</span>
                     <div class="block-text">
                         <i class="fas fa-wrench"></i>
-                        <span><?= \Yii::t('app', 'Dismantling') ?></span>
+                        <span><?= \Yii::t('index', 'Dismantling') ?></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="working-process-mobile">
-        <h1 class="text-center"><?= \Yii::t('app', 'Working process') ?></h1>
+        <h1 class="text-center"><?= \Yii::t('index', 'Algorithm of work') ?></h1>
         <div class="block-holder">
             <div class="block">
                 <span class="block-number">1</span>
                 <div class="block-text">
                     <i class="fas fa-phone-alt"></i>
-                    <span><?= \Yii::t('app', 'Call') ?></span>
+                    <span><?= \Yii::t('index', 'Call') ?></span>
                 </div>
             </div>
             <div class="arrow">
@@ -181,7 +181,7 @@ function renderBrands()
                 <span class="block-number">2</span>
                 <div class="block-text">
                     <i class="fas fa-file-alt"></i>
-                    <span><?= \Yii::t('app', 'Contract') ?></span>
+                    <span><?= \Yii::t('index', 'Contract') ?></span>
                 </div>
             </div>
             <div class="arrow">
@@ -191,9 +191,9 @@ function renderBrands()
                 <span class="block-number">3</span>
                 <div class="block-text">
                     <i class="fas fa-forklift"></i>
-                    <span><?= \Yii::t('app', 'Delivery') ?></span>
+                    <span><?= \Yii::t('index', 'Delivery') ?></span>
 
-                    <span><?= \Yii::t('app', 'Assembling') ?></span>
+                    <span><?= \Yii::t('index', 'Assembling') ?></span>
                 </div>
             </div>
             <div class="arrow">
@@ -203,7 +203,7 @@ function renderBrands()
                 <span class="block-number">4</span>
                 <div class="block-text">
                     <i class="fas fa-broom"></i>
-                    <span><?= \Yii::t('app', 'Service') ?></span>
+                    <span><?= \Yii::t('index', 'Service') ?></span>
                 </div>
             </div>
             <div class="arrow">
@@ -213,7 +213,7 @@ function renderBrands()
                 <span class="block-number">5</span>
                 <div class="block-text">
                     <i class="fas fa-wrench"></i>
-                    <span><?= \Yii::t('app', 'Dismantling') ?></span>
+                    <span><?= \Yii::t('index', 'Dismantling') ?></span>
                 </div>
             </div>
         </div>
@@ -233,7 +233,7 @@ function renderBrands()
         <p><?= \Yii::t('about', "So, we are waiting for your orders and will be happy to advise in the field of portable sanitation.") ?></p>
     </section>
     <section class="brands">
-        <h1><?= Yii::t('app', 'We cooperate with leading global companies') ?></h1>
+        <h1><?= Yii::t('index', 'We cooperate with leading global companies') ?></h1>
         <div class="brand-logos">
             <?= renderBrands() ?>
         </div>

@@ -40,6 +40,7 @@ class ComposerStaticInit6c5f0cf6b6a5cd6eef3de03f1df0a304
         'd' => 
         array (
             'dosamigos\\gallery\\' => 18,
+            'devanych\\cart\\' => 14,
         ),
         'c' => 
         array (
@@ -144,6 +145,10 @@ class ComposerStaticInit6c5f0cf6b6a5cd6eef3de03f1df0a304
         'dosamigos\\gallery\\' => 
         array (
             0 => __DIR__ . '/..' . '/2amigos/yii2-gallery-widget/src',
+        ),
+        'devanych\\cart\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/devanych/yii2-cart',
         ),
         'codemix\\localeurls\\' => 
         array (

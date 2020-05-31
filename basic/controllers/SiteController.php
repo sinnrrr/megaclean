@@ -65,40 +65,6 @@ class SiteController extends Controller
     }
 
     /**
-     * Login action.
-     *
-     * @return Response|string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
-
-    /**
      * Displays order page.
      *
      * @return Response|string
@@ -106,7 +72,7 @@ class SiteController extends Controller
     public function actionOrder()
     {
         $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+        if ($model->load(Yii::$app->request->post()) && $model->contact()) {
             Yii::$app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
@@ -134,5 +100,15 @@ class SiteController extends Controller
     public function actionService()
     {
         return $this->render('service');
+    }
+
+    /**
+     * Displays cart page.
+     *
+     * @return string
+     */
+    public function actionCart()
+    {
+        return $this->render('cart');
     }
 }

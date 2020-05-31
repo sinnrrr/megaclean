@@ -1,0 +1,81 @@
+section.cart {
+    /*background-color: #fafafa;*/
+    /*border-radius: 30px;*/
+    width: 90%;
+    padding: 30px 5%;
+}
+
+div.item:last-of-type {
+    border-bottom: 0;
+}
+
+div.item {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #20c997;
+}
+
+div.info > a > img {
+    max-height: 300px;
+}
+
+div.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.info-text {
+    display: flex;
+    text-align: center;
+    overflow-wrap: break-word;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 15px;
+}
+
+div.info-text > button {
+    margin-top: 15px;
+}
+
+div.info-text > a {
+    display: block;
+    font-size: 32px;
+}
+
+div.item > input {
+    text-align: center !important;
+}
+
+div.input-group {
+    width: 100px;
+    text-align: center;
+}
+
+div.counter-body {
+    display: flex;
+}
+
+div.counter-body > input {
+    text-align: center;
+    margin: 0 5px;
+    width: 60px;
+}
+
+a.btn-danger {
+    margin-top: 15px;
+    padding: 5px 15px;
+    font-size: 20px !important;
+}
+
+a.btn-success {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+b {
+    font-size: 24px;
+    margin: 0 5px;
+    user-select: none;
+}

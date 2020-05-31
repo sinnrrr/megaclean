@@ -50,21 +50,23 @@ div.product:hover {
   border: 1px solid #20c997;
 }
 
-div.product > div > button {
+a.order-button {
   width: 90%;
+  color: black;
+  display: block;
   visibility: hidden;
   font-weight: 600;
   background-color: transparent;
   border: 3px solid #20c997;
-  margin: 15px 0;
+  margin: 15px auto;
 }
 
-div.product > div > button:hover {
+a.order-button:hover {
   background-color: #20c997;
   color: white;
 }
 
-div.product:hover > div > button {
+div.product:hover > div > a.order-button {
   visibility: visible;
 }
 

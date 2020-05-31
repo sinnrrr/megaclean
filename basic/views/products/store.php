@@ -1,6 +1,6 @@
 <?php
 
-use app\models\Products;
+use app\models\Product;
 
 /* @var $this yii\web\View */
 /* @var $mode */
@@ -9,12 +9,12 @@ use app\models\Products;
 
 if (isset($category) && !empty($category)) {
     $productName = preg_replace('/_/', ' ', $category);
-    $this->title = ucfirst(Yii::t('app', ucfirst($productName))) . ' | ' . Yii::$app->name;
+    $this->title = ucfirst(Yii::t('select', ucfirst($productName))) . ' | ' . Yii::$app->name;
 } else {
     $this->title = Yii::t('app', 'Store') . ' | ' . Yii::$app->name;    
 }
 
-$products = Products::getFilteredProducts($mode, $category);
+$products = Product::getFilteredProducts($mode, $category);
 
 $this->registerCssFile("@web/css/store.css");
 $this->registerCssFile('@web/css/all.min.css');
@@ -22,7 +22,7 @@ $this->registerCssFile('@web/css/all.min.css');
 ?>
 
 <div class="site-store">
-    <h1 class="text-center"><?= empty($category) ? \Yii::t('app', 'Store') : \Yii::t('app', ucfirst($productName)) ?></h1>
+    <h1 class="text-center"><?= empty($category) ? \Yii::t('app', 'Store') : \Yii::t('select', ucfirst($productName)) ?></h1>
     <div class="flex-center">
         <?php
         foreach ($products as $product){

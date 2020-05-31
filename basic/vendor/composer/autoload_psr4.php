@@ -15,6 +15,7 @@ return array(
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'dosamigos\\gallery\\' => array($vendorDir . '/2amigos/yii2-gallery-widget/src'),
+    'devanych\\cart\\' => array($vendorDir . '/devanych/yii2-cart'),
     'codemix\\localeurls\\' => array($vendorDir . '/codemix/yii2-localeurls'),
     'cetver\\LanguageSelector\\' => array($vendorDir . '/cetver/yii2-language-selector'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),

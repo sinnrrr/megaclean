@@ -2,7 +2,7 @@
 
 return [
     'As a standard, we offer a portable sanitation rental service with one, two or four services per month.'
-    => 'Як стандарт, ми пропонуємо послугу оренди портативного санітарії з одним, двома або чотирма послугами сервісу в місяць.',
+    => 'Як стандарт, ми пропонуємо послугу оренди портативної санітарії з одним, двома або чотирма послугами сервісу в місяць.',
 
     'The service is carried out in accordance with the instructions and expectations of our customers - it is included in the price calculated for the rental of the cabin.'
     => 'Послуга сервісу здійснюється відповідно до вказівок і очікуваннь наших клієнтів - вона включена в ціну, розраховану на оренду кабіни.',
@@ -28,8 +28,8 @@ return [
     => 'чистка та дезінфекція туалету',
     'filling the tank with German concentrate WC CLEANER'
     => 'заправка резервуара німецьким концентратом WC CLEANER',
-    'addition of toilet paper '
-    => 'добавка туалетного паперу ',
+    'addition of toilet paper'
+    => 'добавка туалетного паперу',
     'adding flavors'
     => 'додавання ароматів',
     'elimination of minor damage'
@@ -48,5 +48,5 @@ return [
 
 
     'Toilet service is always performed taking into account the individual needs and requirements of the client.'
-    => 'Туалетний сервіс завжди виконується з урахуванням індивідуальних потреб і вимог клієнта.',
+    => 'Послуга сервісу завжди виконується з урахуванням індивідуальних потреб і вимог клієнта.',
 ];

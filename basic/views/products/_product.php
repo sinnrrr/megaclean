@@ -21,6 +21,15 @@ $condition = $product['status'] != 'available';
     <?= $condition ? "<span class='disabled-text'>" . Yii::t('app', 'Sold Out') . "</span>" : '' ?>
     <div>
         <a href="<?= Url::toRoute(['product', 'id' => $product['id']]) ?>"><?= $product['model'] ?></a>
-        <button><?= $condition ? \Yii::t('app', 'Read about') : \Yii::t('app', 'Order') ?></button>
+        <a class="order-button"
+           href="<?= Url::to([
+                    'cart/add',
+                    'id' => $product['id'],
+                    'redirect' => Url::current()
+           ]) ?>">
+            <?= $condition
+                ? \Yii::t('app', 'Read about')
+                : \Yii::t('app', 'Order') ?>
+        </a>
     </div>
 </div>

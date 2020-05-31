@@ -17,6 +17,9 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '9ODRJJsV0bC4yUPbTJSpVXHyWhfyCilA',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -28,21 +31,29 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-//        'mailer' => [
-//            'class' => 'yii\swiftmailer\Mailer',
-//            'transport' => [
-//                'class' => 'Swift_SmtpTransport',
-//                'host' => 'smtp.gmail.com',
-//                'username' => '',
-//                'password' => '',
-//                'port' => '465',
-//                'encryption' => 'tls',
-//            ],
-//            // send all mails to a file by default. You have to set
-//            // 'useFileTransport' to false and configure a transport
-//            // for the mailer to send real emails.
-//            'useFileTransport' => false,
-//        ],
+        'cart' => [
+            'class' => 'devanych\cart\Cart',
+            'storageClass' => 'devanych\cart\storage\CookieStorage',
+            'calculatorClass' => 'devanych\cart\calculators\SimpleCalculator',
+            'params' => [
+                'key' => 'cart',
+                'expire' => 604800,
+                'productClass' => 'app\models\Product',
+                'productFieldId' => 'id',
+            ],
+        ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'eushared06.twinservers.net',
+                'username' => 'office@megaclean.com.ua',
+                'password' => 'skyTHUNDER576',
+                'port' => '465',
+                'encryption' => 'ssl',
+            ]
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -87,6 +98,42 @@ $config = [
                     'sourceLanguage' => 'en',
                     'fileMap' => [
                         'app' => 'service.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+                'index' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/translations',
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        'app' => 'index.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+                'cart' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/translations',
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        'app' => 'cart.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+                'select' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/translations',
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        'app' => 'select.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+                'product' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/translations',
+                    'sourceLanguage' => 'en',
+                    'fileMap' => [
+                        'app' => 'product.php',
                         'app/error' => 'error.php',
                     ],
                 ],

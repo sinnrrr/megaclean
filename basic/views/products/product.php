@@ -4,9 +4,10 @@
 
 /* @var $id */
 
-use app\models\Products;
+use app\models\Product;
+use yii\helpers\Url;
 
-$productInfo = Products::getProductById($id);
+$productInfo = Product::getProductById($id);
 
 $this->title = $productInfo['model'] . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/product.css');
@@ -27,15 +28,22 @@ if (!empty($productInfo['photos'])) {
     <?php if (isset($galleryItems)) {
         echo dosamigos\gallery\Gallery::widget(['items' => $galleryItems]);
     } else {
-        $noPhoto = "<div class='no-photo'><i class='fas fa-image'></i><span>" . Yii::t('app', 'No photo') . "</span></div>";
+        $noPhoto = "<div class='no-photo'><i class='fas fa-image'></i><span>" . Yii::t('product', 'No photo') . "</span></div>";
         echo $noPhoto;
     }
     ?>
     <div class="about">
         <h1><?= $productInfo['model'] ?></h1>
-        <small><?= Yii::t('app', 'Manufacture country:') ?> <?= Yii::t('app', $productInfo['manufacture']) ?></small>
+        <small>Страна производителя: <?= Yii::t('product', $productInfo['manufacture']) ?></small>
         <div><?= $productInfo['description'] ?></div>
-        <a class="order-button"><?= \Yii::t('app', 'Order') ?></a>
+        <a class="order-button"
+           href="<?= Url::to([
+               'cart/add',
+               'id' => $productInfo['id'],
+               'redirect' => Url::current()
+           ]) ?>">
+            <?= \Yii::t('app', 'Order') ?>
+        </a>
     </div>
 </div>
 
@@ -45,7 +53,7 @@ if (!empty($productInfo['photos'])) {
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseOne"><?= \Yii::t('app', 'Standard equipment') ?></a>
+                       href="#collapseOne"><?= \Yii::t('product', 'Standard equipment') ?></a>
                 </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse">
@@ -58,7 +66,7 @@ if (!empty($productInfo['photos'])) {
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseFour"><?= \Yii::t('app', 'Additional equipment') ?></a>
+                       href="#collapseFour"><?= \Yii::t('product', 'Additional equipment') ?></a>
                 </h4>
             </div>
             <div id="collapseFour" class="panel-collapse collapse">
@@ -71,7 +79,7 @@ if (!empty($productInfo['photos'])) {
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion"
-                       href="#collapseFive"><?= \Yii::t('app', 'Technical data') ?></a>
+                       href="#collapseFive"><?= \Yii::t('product', 'Technical data') ?></a>
                 </h4>
             </div>
             <div id="collapseFive" class="panel-collapse collapse">
