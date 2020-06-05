@@ -10,6 +10,7 @@ $cart = Yii::$app->cart;
 //$cart->add((Object) ['id' => 11], 1);
 
 $products = $cart->getItems();
+$webUrl = Yii::getAlias('@web');
 
 ?>
 
@@ -31,7 +32,7 @@ $products = $cart->getItems();
                     <div class="item">
                         <div class="info">
                             <a href="<?= Url::toRoute(['products/product', 'id' => $product->id]) ?>">
-                                <img src="/basic/web/uploads/<?= $photo ?>"
+                                <img src="<?= $webUrl ?>/uploads/<?= $photo ?>"
                                      alt="">
                             </a>
                             <div class="info-text">

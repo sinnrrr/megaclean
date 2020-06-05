@@ -7,13 +7,14 @@ use yii\helpers\Url;
 $product['photos'] = json_decode($product['photos'], true);
 
 $condition = $product['status'] != 'available';
+$webUrl = Yii::getAlias('@web');
 
 ?>
 <div class="product <?= $condition ?? 'disabled' ?>">
     <a href="<?= Url::toRoute(['product', 'id' => $product['id']]) ?>">
         <?php
             if (isset($product['photos'][0])){
-                echo "<img src='/basic/web/uploads/{$product['photos'][0]}' alt=''>";
+                echo "<img src='{$webUrl}/uploads/{$product['photos'][0]}' alt=''>";
             } else {
                 echo "<i class='fas fa-question-circle'></i>";
             } ?>

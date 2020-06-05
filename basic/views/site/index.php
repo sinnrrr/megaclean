@@ -8,15 +8,20 @@ $this->title = Yii::$app->name;
 $this->registerCssFile('@web/css/index.css');
 $this->registerCssFile("@web/css/all.min.css");
 
+global $imgUrl;
+$imgUrl = Yii::getAlias('@web') . '/img';
+
 function renderBrands()
 {
+    global $imgUrl;
+
     $imagesArray = scandir('img/brands');
 
     unset($imagesArray[0]);
     unset($imagesArray[1]);
 
     foreach ($imagesArray as $image) {
-        echo "<img src='/basic/web/img/brands/{$image}' alt=''>";
+        echo "<img src='{$imgUrl}/brands/{$image}' alt=''>";
     }
 }
 
@@ -40,35 +45,35 @@ function renderBrands()
                     <div class="carousel-caption">
                         <h3><?= \Yii::t('index', 'Festivals and events') ?></h3>
                     </div>
-                    <img src="/basic/web/img/carousel/festivals.jpg" alt="">
+                    <img src="<?= $imgUrl ?>/carousel/festivals.jpg" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
                         <h3><?= \Yii::t('index', 'Constructions') ?></h3>
                     </div>
-                    <img src="/basic/web/img/carousel/construction.png" alt="">
+                    <img src="<?= $imgUrl ?>/carousel/construction.png" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
                         <h3><?= \Yii::t('index', 'Military educations') ?></h3>
                     </div>
-                    <img src="/basic/web/img/carousel/military.jpg" alt="">
+                    <img src="<?= $imgUrl ?>/carousel/military.jpg" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
                         <h3><?= \Yii::t('index', 'Parking') ?></h3>
                     </div>
-                    <img src="/basic/web/img/carousel/parking.png" alt="">
+                    <img src="<?= $imgUrl ?>/carousel/parking.png" alt="">
                 </div>
 
                 <div class="item">
                     <div class="carousel-caption">
                         <h3><?= \Yii::t('index', 'Competitions') ?></h3>
                     </div>
-                    <img src="/basic/web/img/carousel/competitions.png" alt="">
+                    <img src="<?= $imgUrl ?>/carousel/competitions.png" alt="">
                 </div>
             </div>
 
@@ -94,7 +99,7 @@ function renderBrands()
             </div>
             <div class="card">
                 <a href="<?= Url::toRoute('site/service') ?>" class="fas fa-recycle card-icon"></a>
-                <a href="<?= Url::toRoute('site/service') ?>"><?= \Yii::t('index', 'Service') ?></a>
+                <a href="<?= Url::toRoute('site/service') ?>"><?= \Yii::t('app', 'Service') ?></a>
             </div>
             <div class="card">
                 <a href="<?= Url::toRoute(['products/select', 'mode' => 'sale']) ?>"
@@ -146,7 +151,7 @@ function renderBrands()
                     <span class="block-number">4</span>
                     <div class="block-text">
                         <i class="fas fa-broom"></i>
-                        <span><?= \Yii::t('index', 'Service') ?></span>
+                        <span><?= \Yii::t('app', 'Service') ?></span>
                     </div>
                 </div>
             </div>
@@ -221,7 +226,7 @@ function renderBrands()
     <section class="about">
         <h1><?= \Yii::t('app', 'About Us') ?></h1>
 
-        <img src="/basic/web/img/index/about.jpg" alt="">
+        <img src="<?= $imgUrl ?>/index/about.jpg" alt="">
         <p><?= \Yii::t('about', "With more than 9 years of experience in the field of portable sanitation, Megaclean has built an impeccable reputation in the field of rental and maintenance of mobile sanitary systems, which meets and exceeds the needs of our customers.") ?></p>
 
         <p><?= \Yii::t('about', "The use of portable toilets (bio toilets), washbasins and other sanitary equipment of well-known world brands for rent is a major step forward, made thanks to all the useful advice of many customers. During operation, our equipment can withstand constant loads and even abuse, but it is easy to clean and maintain, which creates a comfortable environment for both users and operators.") ?></p>

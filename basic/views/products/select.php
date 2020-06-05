@@ -48,7 +48,7 @@ foreach ($listOfProducts as $variant) {
         foreach ($productsAvailable as $product) {
             $category = $product;
             $productName = preg_replace('/_/', ' ', $product);
-            $image = '/basic/web/img/category/' . $product . ".jpg";
+            $image = Yii::getAlias('@web') . '/img/category/' . $product . ".jpg";
             $title = \Yii::t('select', ucfirst($productName));
 
             echo $this->render('_category', [

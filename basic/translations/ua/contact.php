@@ -7,5 +7,11 @@ return [
     'Thank you for contacting us. We will respond to you as soon as possible.'
     => 'Дякуємо, що зв’язалися з нами. Ми відповімо вам якнайшвидше.',
 
-    'Look at other goods' => 'Подивитись інші товари'
+    'Look at other goods' => 'Подивитись інші товари',
+
+    'Name' => 'Ім\'я',
+    'Email' => 'Електронна пошта',
+    'Subject' => 'Тема',
+    'Body' => 'Лист',
+    'Verification code' => 'Код перевірки',
 ];

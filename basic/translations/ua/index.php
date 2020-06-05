@@ -3,7 +3,6 @@
 return [
     'We provide a full range of services related to mobile sanitation systems' => 'Ми надаємо весь спектр послуг, що стосується мобільних санітарних систем',
     'Rent' => 'Оренда',
-    'Service' => 'Сервіс',
     'Sale' => 'Продаж',
     'Military educations' => 'Військові навчання',
     'Parking' => 'Автомобільні парковки',

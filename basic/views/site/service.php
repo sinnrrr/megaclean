@@ -7,10 +7,9 @@
         <p><?= Yii::t('service', 'The service is carried out in accordance with the instructions and expectations of our customers - it is included in the price calculated for the rental of the cabin.') ?></p>
         <p><?= Yii::t('service', 'At the request of the client we can carry out service several times a week and even daily. Then the cost of the service is calculated individually on the principle of «the more services, the lower the price».') ?></p>
         <p><?= Yii::t('service', 'We help determine the frequency of service according to customer needs.') ?></p>
-        <p><?= Yii::t('service', 'Provision, installation and assembly, as well as visiting toilets after the expiration of the contract - free of charge!') ?></p>
         <p><?= Yii::t('service', 'The toilets rented by the clients are regularly washed and kept in comfort with the use of special equipment and the German toilet concentrate WC CLEANER.') ?></p>
 
-        <i><?= Yii::t('service', 'The service includes:') ?></i>
+        <b><i><?= Yii::t('service', 'The service includes:') ?></i></b>
         <ul>
             <li><?= Yii::t('service', 'removal of dirt from the toilet') ?></li>
             <li><?= Yii::t('service', 'cleaning and disinfection of the toilet') ?></li>
@@ -20,7 +19,7 @@
             <li><?= Yii::t('service', 'elimination of minor damage') ?></li>
         </ul>
 
-        <i><?= Yii::t('service', 'How to maintain portable toilets') ?></i>
+        <b><i><?= Yii::t('service', 'How to maintain portable toilets') ?></i></b>
         <ul>
             <li><?= Yii::t('service', 'first of all it is necessary to empty the toilet, which is done by pumping dirt through the hole under the toilet lid with a special pump adapted for the operation of eco-toilets installed on the tank') ?></li>
             <li><?= Yii::t('service', 'then the tank and the entire cabin inside and outside are washed with a high pressure washer') ?></li>

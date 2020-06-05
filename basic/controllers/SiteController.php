@@ -7,7 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
+use app\models\OrderForm;
 use app\models\ContactForm;
 
 class SiteController extends Controller
@@ -69,7 +69,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionOrder()
+    public function actionContact()
     {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->contact()) {
@@ -77,19 +77,27 @@ class SiteController extends Controller
 
             return $this->refresh();
         }
-        return $this->render('order', [
+        return $this->render('contact', [
             'model' => $model,
         ]);
     }
 
     /**
-     * Displays contact page.
+     * Displays order page.
      *
      * @return string
      */
-    public function actionContact()
+    public function actionOrder()
     {
-        return $this->render('contact');
+        $model = new OrderForm();
+        if ($model->load(Yii::$app->request->post()) && $model->order()) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
+
+            return $this->refresh();
+        }
+        return $this->render('order', [
+            'model' => $model,
+        ]);
     }
 
     /**

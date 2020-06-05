@@ -17,8 +17,8 @@ if (!empty($productInfo['photos'])) {
     $productInfo['photos'] = json_decode($productInfo['photos'], true);
 
     foreach ($productInfo['photos'] as $key => $value) {
-        $galleryItems[$key]['url'] = '/basic/web/uploads/' . $value;
-        $galleryItems[$key]['src'] = '/basic/web/uploads/' . $value;
+        $galleryItems[$key]['url'] = '@web/uploads/' . $value;
+        $galleryItems[$key]['src'] = '@web/uploads/' . $value;
     }
 }
 

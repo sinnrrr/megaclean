@@ -8,7 +8,7 @@ use yii\base\Model;
 /**
  * ContactForm is the model behind the contact form.
  */
-class ContactForm extends Model
+class OrderForm extends Model
 {
     public $name;
     public $email;
@@ -24,7 +24,7 @@ class ContactForm extends Model
     {
         return [
             // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body'], 'required'],
+            [['name', 'email'], 'required'],
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
@@ -40,8 +40,6 @@ class ContactForm extends Model
         return [
             'name' => Yii::t('contact', 'Name'),
             'email' => Yii::t('contact', 'Email'),
-            'subject' => Yii::t('contact', 'Subject'),
-            'body' => Yii::t('contact', 'Body'),
             'verifyCode' => Yii::t('contact', 'Verification code'),
         ];
     }
@@ -50,7 +48,7 @@ class ContactForm extends Model
      * Sends an email to the specified email address using the information collected by this model.
      * @return bool whether the model passes validation
      */
-    public function contact()
+    public function order()
     {
         if ($this->validate()) {
             Yii::$app->mailer->compose()
@@ -59,6 +57,8 @@ class ContactForm extends Model
                 ->setSubject($this->subject)
                 ->setTextBody($this->body)
                 ->send();
+
+            Yii::$app->cart->clear();
 
             return true;
         }

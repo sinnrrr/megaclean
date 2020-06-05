@@ -31,6 +31,7 @@ $languageItem = new cetver\LanguageSelector\items\DropDownLanguageItem([
 ]);
 
 $currentUrl = Url::current();
+$webUrl = Yii::getAlias('@web');
 
 $this->registerJs("
     const popup = document.getElementById('popup');
@@ -104,7 +105,7 @@ if (!empty($m)) {
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => "<img src='{$webUrl}/img/logo.png' class='logo'>",
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse',
@@ -119,7 +120,7 @@ if (!empty($m)) {
         'items' => [
             ['label' => \Yii::t('app', 'Store'), 'url' => ['/products/store']],
             ['label' => \Yii::t('app', 'Order'), 'url' => ['/site/order']],
-//            ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/order']],
+            ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
             ['label' => \Yii::t('app', 'Cart'), 'url' => ['/site/cart']],
             $languageItem->toArray(),
         ],
@@ -139,7 +140,13 @@ if (!empty($m)) {
 
 <footer class="footer">
     <div class="container">
-        <p class="text-center">&copy; <?= Yii::$app->name ?> <?= date('Y') ?></p>
+        <div class="footer-copyright text-center py-3">
+            <span class="footer-text">&copy; <?= Yii::$app->name ?> 2010-<?= date('Y') ?></span>
+            |
+            <a target="_blank"
+               href="https://www.instagram.com/sinnrrr/"
+               class="footer-logo">Developed by sinnrrr</a>
+        </div>
     </div>
 </footer>
 

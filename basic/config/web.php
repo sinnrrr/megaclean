@@ -83,12 +83,12 @@ $config = [
                         'app/error' => 'error.php',
                     ],
                 ],
-                'order' => [
+                'contact' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@app/translations',
                     'sourceLanguage' => 'en',
                     'fileMap' => [
-                        'app' => 'order.php',
+                        'app' => 'contact.php',
                         'app/error' => 'error.php',
                     ],
                 ],

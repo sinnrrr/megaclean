@@ -5,10 +5,16 @@ footer {
     /*animation: 1s ease-in-out fadeInUp;*/
 }
 
-footer>div.container>p {
+span.footer-text {
     color: #007bff;
     font-weight: 800;
     letter-spacing: 1px;
     /*animation: 1s ease-in-out fadeInUp;*/
     /* animation-delay: 100ms; */
+}
+
+a.footer-logo {
+    color: gray;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
