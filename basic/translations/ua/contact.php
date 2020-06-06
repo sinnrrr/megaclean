@@ -7,11 +7,20 @@ return [
     'Thank you for contacting us. We will respond to you as soon as possible.'
     => 'Дякуємо, що зв’язалися з нами. Ми відповімо вам якнайшвидше.',
 
+    'Thank you for order. We will proceed it as soon as possible!'
+    => 'Дякуємо Вам за замовлення. Ми постараємось опрацювати це замовлення якнайшвидше!',
+
     'Look at other goods' => 'Подивитись інші товари',
 
     'Name' => 'Ім\'я',
     'Email' => 'Електронна пошта',
     'Subject' => 'Тема',
     'Body' => 'Лист',
+    'Phone' => 'Телефон',
     'Verification code' => 'Код перевірки',
+
+    'Check cart' => 'Подивитись кошик',
+
+    'You have added {0, plural, one{item} other{items}}'
+    => 'У кошику {0, plural, one{одна позиція товару} few{{0} позиції товару} many{{0} позицій товарів} other{{0} позицій товарів}}'
 ];

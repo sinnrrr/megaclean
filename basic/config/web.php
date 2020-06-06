@@ -128,12 +128,12 @@ $config = [
                         'app/error' => 'error.php',
                     ],
                 ],
-                'product' => [
+                'view' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@app/translations',
                     'sourceLanguage' => 'en',
                     'fileMap' => [
-                        'app' => 'product.php',
+                        'app' => 'view.php',
                         'app/error' => 'error.php',
                     ],
                 ],

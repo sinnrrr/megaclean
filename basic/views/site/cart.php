@@ -31,12 +31,12 @@ $webUrl = Yii::getAlias('@web');
                     ?>
                     <div class="item">
                         <div class="info">
-                            <a href="<?= Url::toRoute(['products/product', 'id' => $product->id]) ?>">
+                            <a href="<?= Url::toRoute(['products/view', 'id' => $product->id]) ?>">
                                 <img src="<?= $webUrl ?>/uploads/<?= $photo ?>"
                                      alt="">
                             </a>
                             <div class="info-text">
-                                <a href="<?= Url::toRoute(['products/product', 'id' => $product->id]) ?>">
+                                <a href="<?= Url::toRoute(['products/view', 'id' => $product->id]) ?>">
                                     <?= $product->model ?></a>
                                 <div class="counter">
                                     <span><?= Yii::t('cart', 'Quantity') ?></span>

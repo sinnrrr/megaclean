@@ -11,7 +11,7 @@ $webUrl = Yii::getAlias('@web');
 
 ?>
 <div class="product <?= $condition ?? 'disabled' ?>">
-    <a href="<?= Url::toRoute(['product', 'id' => $product['id']]) ?>">
+    <a href="<?= Url::toRoute(['products/view', 'id' => $product['id']]) ?>">
         <?php
             if (isset($product['photos'][0])){
                 echo "<img src='{$webUrl}/uploads/{$product['photos'][0]}' alt=''>";
@@ -21,7 +21,7 @@ $webUrl = Yii::getAlias('@web');
     </a>
     <?= $condition ? "<span class='disabled-text'>" . Yii::t('app', 'Sold Out') . "</span>" : '' ?>
     <div>
-        <a href="<?= Url::toRoute(['product', 'id' => $product['id']]) ?>"><?= $product['model'] ?></a>
+        <a href="<?= Url::toRoute(['products/view', 'id' => $product['id']]) ?>"><?= $product['model'] ?></a>
         <a class="order-button"
            href="<?= Url::to([
                     'cart/add',

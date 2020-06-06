@@ -21,17 +21,15 @@ $cartItemsCounter = Yii::$app->cart->getTotalCount();
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
         <div class="success-email">
             <div class="alert alert-success">
-                <?= Yii::t('contact', 'Thank you for order. We will proceed it as soon as possible.') ?>
+                <?= Yii::t('contact', 'Thank you for order. We will proceed it as soon as possible!') ?>
             </div>
-            <a href="<?= Url::toRoute('products/store') ?>" class="btn btn-primary">
+            <a href="<?= Url::toRoute('products/store') ?>" class="btn btn-primary other-button">
                 <?= Yii::t('contact', 'Look at other goods') ?>
             </a>
         </div>
     <?php elseif ($cartItemsCounter > 0): ?>
         <div class="flex-center">
             <h1><?= \Yii::t('app', 'Order') ?></h1>
-            <p><?= \Yii::t('contact',
-                    'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?></p>
         </div>
         <div class="email-form">
             <?php $form = ActiveForm::begin(['id' => 'contact-form', 'class' => 'flex-center']); ?>
@@ -39,6 +37,18 @@ $cartItemsCounter = Yii::$app->cart->getTotalCount();
             <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
 
             <?= $form->field($model, 'email') ?>
+
+            <?= $form->field($model, 'phone') ?>
+
+            <b>
+                <?= Yii::t(
+                        'contact',
+                        'You have added {0, plural, one{item} other{items}}',
+                        $cartItemsCounter
+                ) ?>
+            </b>
+            <br>
+            <a href="<?= Url::toRoute('site/cart') ?>" class="btn btn-info" style="margin: 12px 0 !important;"><?= Yii::t('contact', 'Check cart') ?></a>
 
             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                 'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
@@ -55,7 +65,7 @@ $cartItemsCounter = Yii::$app->cart->getTotalCount();
         <h1><?= Yii::t('cart', 'No items in cart') ?></h1>
         <br>
         <a href="<?= Url::toRoute('products/store') ?>"
-           class="btn btn-primary"
+           class="btn btn-primary no-items-button"
            style="margin-top: 5px;">
             <?= Yii::t('cart', 'Go shopping') ?>
         </a>

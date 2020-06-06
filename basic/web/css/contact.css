@@ -9,9 +9,9 @@ div.success-email {
     text-align: center;
 }
 
-a.btn-primary {
-    font-size: 30px;
-    font-weight: 600;
+a.no-items-button, a.other-button {
+    font-size: 30px !important;
+    font-weight: 600 !important;
 }
 
 div.flex-center {

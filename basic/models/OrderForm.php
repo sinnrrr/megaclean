@@ -12,10 +12,10 @@ class OrderForm extends Model
 {
     public $name;
     public $email;
+    public $phone;
     public $subject;
     public $body;
     public $verifyCode;
-
 
     /**
      * @return array the validation rules.
@@ -23,11 +23,9 @@ class OrderForm extends Model
     public function rules()
     {
         return [
-            // name, email, subject and body are required
-            [['name', 'email'], 'required'],
-            // email has to be a valid email address
+            [['name', 'email', 'phone'], 'required'],
             ['email', 'email'],
-            // verifyCode needs to be entered correctly
+            ['phone', 'number'],
             ['verifyCode', 'captcha'],
         ];
     }
@@ -40,6 +38,7 @@ class OrderForm extends Model
         return [
             'name' => Yii::t('contact', 'Name'),
             'email' => Yii::t('contact', 'Email'),
+            'phone' => Yii::t('contact', 'Phone'),
             'verifyCode' => Yii::t('contact', 'Verification code'),
         ];
     }
@@ -51,6 +50,17 @@ class OrderForm extends Model
     public function order()
     {
         if ($this->validate()) {
+            $products = Yii::$app->cart->getItems();
+
+            foreach ($products as $item) {
+                $quantity = $item->getQuantity();
+                $product = $item->getProduct();
+
+                $this->body .= "{$product->model} ({$quantity})" . PHP_EOL;
+            }
+
+            $this->subject = 'Замовлення:' . ' ' . $this->phone . ' ' . $this->name;
+
             Yii::$app->mailer->compose()
                 ->setTo(Yii::$app->params['adminEmail'])
                 ->setFrom($this->email)
@@ -58,7 +68,7 @@ class OrderForm extends Model
                 ->setTextBody($this->body)
                 ->send();
 
-            Yii::$app->cart->clear();
+//            Yii::$app->cart->clear();
 
             return true;
         }
