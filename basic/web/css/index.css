@@ -243,6 +243,18 @@ section.working-process-mobile > div.block-holder > div.block > div.block-text >
     font-size: 32px;
 }
 
+@media screen and (max-width: 576px) {
+    section.about {
+        padding: 60px 30px;
+    }
+
+    section.about > img {
+        width: 100%;
+        height: auto;
+        margin: 5px auto;
+    }
+}
+
 @media screen and (max-width: 936px) {
     div.card {
         margin-bottom: 15px !important;

@@ -43,7 +43,7 @@ $cartItemsCounter = Yii::$app->cart->getTotalCount();
             <b>
                 <?= Yii::t(
                         'contact',
-                        'You have added {0, plural, one{item} other{items}}',
+                        'Items in the cart: {0}',
                         $cartItemsCounter
                 ) ?>
             </b>

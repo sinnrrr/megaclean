@@ -21,6 +21,6 @@ return [
 
     'Check cart' => 'Подивитись кошик',
 
-    'You have added {0, plural, one{item} other{items}}'
-    => 'У кошику {0, plural, one{одна позиція товару} few{{0} позиції товару} many{{0} позицій товарів} other{{0} позицій товарів}}'
+    'Items in the cart: {0}'
+    => 'Позицій товару у кошику: {0}'
 ];
