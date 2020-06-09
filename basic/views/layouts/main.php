@@ -118,7 +118,7 @@ if (!empty($m)) {
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => "<img src='{$webUrl}/img/logo.png' class='logo'>",
+        'brandLabel' => "<img src='{$webUrl}/img/logo.png' class='logo' alt='Logo image'>",
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse',
