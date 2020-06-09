@@ -89,9 +89,13 @@ if (!empty($m)) {
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
+    <meta name="robots" content="all">
+    <meta name="googlebot" content="all">
     <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="author" content="Dmytro Soltusyuk">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Megaclean - компания с многолетним опытом работы в среде портативной санитарии. Мы надаем услугу оренды, чистки и продажи биотуалетов, мобильных умывальников, душевых кабин и много чего еще!">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>

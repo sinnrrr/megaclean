@@ -14,7 +14,7 @@ $webUrl = Yii::getAlias('@web');
     <a href="<?= Url::toRoute(['products/view', 'id' => $product['id']]) ?>">
         <?php
             if (isset($product['photos'][0])){
-                echo "<img src='{$webUrl}/uploads/{$product['photos'][0]}' alt=''>";
+                echo "<img src='{$webUrl}/uploads/{$product['photos'][0]}' alt='{$product['model']} photo'>";
             } else {
                 echo "<i class='fas fa-question-circle'></i>";
             } ?>

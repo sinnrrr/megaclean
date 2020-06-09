@@ -35,7 +35,7 @@ $webUrl = Yii::getAlias('@web');
                             <div class="info">
                                 <a href="<?= Url::toRoute(['products/view', 'id' => $product->id]) ?>">
                                     <img src="<?= $webUrl ?>/uploads/<?= $photo ?>"
-                                         alt="">
+                                         alt="<?= $product->model ?> photo">
                                 </a>
                                 <div class="info-text">
                                     <a href="<?= Url::toRoute(['products/view', 'id' => $product->id]) ?>">

@@ -16,7 +16,7 @@ use yii\helpers\Url;
             'mode' => $mode,
             'category' => $category
     ]) ?>">
-        <img src="<?= $image ?>" alt=''>
+        <img src="<?= $image ?>" alt='<?= $category ?> photo'>
     </a>
     <a href="<?= Url::toRoute([
             'products/store',

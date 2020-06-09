@@ -12,9 +12,10 @@ return [
     'Cart' => 'Корзина',
     'Delete' => 'Удалить',
     'Submit' => 'Отправить',
-    'Read about' => 'Посмотреть',
     'Sold Out' => 'Продано',
+    'Read about' => 'Посмотреть',
     'Item successfully added to cart' => 'Товар успешно добавлен в корзину',
+    'Mobile portable sanitary and more!' => 'Портативная санитария и даже больше!',
     'Quantity of this good has been changed' => 'Количество этого товара было изменено',
     'This item has been successfully deleted from the cart' => 'Этот предмет был успешно удален из корзины'
 ];
