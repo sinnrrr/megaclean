@@ -89,6 +89,15 @@ if (!empty($m)) {
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168946176-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-168946176-1');
+    </script>
     <meta name="robots" content="all">
     <meta name="googlebot" content="all">
     <meta charset="<?= Yii::$app->charset ?>">
