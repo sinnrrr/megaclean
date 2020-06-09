@@ -8,7 +8,7 @@ $config = [
     'name' => 'Megaclean',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'language' => 'ua',
+    'language' => 'ru',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
@@ -143,6 +143,16 @@ $config = [
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
             'languages' => ['ua', 'ru', 'en'],
+            'showScriptName' => false,
+            'enablePrettyUrl' => true,
+            'enableStrictParsing' => false,
+            'enableLanguageDetection' => true,
+            'rules' => [
+                '/' => 'site/index',
+                'order' => 'site/order',
+                'contact' => 'site/contact',
+                'cart' => 'site/cart',
+            ],
         ],
     ],
     'params' => $params,
