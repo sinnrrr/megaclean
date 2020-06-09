@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
         'css/navbar.css',
         'css/footer.css',
         'css/animate.css',
+        'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css',
         'https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900&display=swap'
     ];
     public $js = [

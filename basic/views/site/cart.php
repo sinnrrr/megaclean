@@ -9,6 +9,7 @@ $this->registerCssFile('@web/css/cart.css');
 $cart = Yii::$app->cart;
 
 $products = $cart->getItems();
+$counter = $cart->getTotalCount();
 $webUrl = Yii::getAlias('@web');
 
 ?>
@@ -16,11 +17,11 @@ $webUrl = Yii::getAlias('@web');
 <div class="site-service">
     <div class="flex-center">
         <section class="cart">
-            <h1><?= Yii::t('app', 'Cart') ?></h1>
-
             <?php Pjax::begin(); ?>
 
-            <?php if (count($products) > 0): ?>
+            <?php if ($counter > 0): ?>
+                <h1><?= Yii::t('app', 'Cart') ?></h1>
+
                 <b><?= Yii::t('cart', 'Quantity of goods:') . ' ' . count($products) ?></b>
                 <div class="items-holder">
 
@@ -73,13 +74,15 @@ $webUrl = Yii::getAlias('@web');
                        class="btn btn-success"><?= Yii::t('cart', 'To order') ?></a>
                 </div>
             <?php else: ?>
-                <strong><?= Yii::t('cart', 'No items in cart') ?></strong>
-                <br>
-                <a href="<?= Url::toRoute('products/store') ?>"
-                   class="btn btn-primary"
-                   style="margin-top: 5px;">
-                    <?= Yii::t('cart', 'Go shopping') ?>
-                </a>
+                <div class="no-items">
+                    <h1><?= Yii::t('cart', 'No items in cart') ?></h1>
+                    <br>
+                    <a href="<?= Url::toRoute('products/store') ?>"
+                       class="btn btn-primary no-items-button"
+                       style="margin-top: 5px;">
+                        <?= Yii::t('cart', 'Go shopping') ?>
+                    </a>
+                </div>
             <?php endif; ?>
 
             <?php Pjax::end(); ?>
