@@ -116,6 +116,10 @@ ul#w2 > li > a:active {
     color: #20c997;
 }
 
+img.logo {
+    height: 40px !important;
+}
+
 @media screen and (max-width: 768px) {
     /*.order-button {*/
     /*    margin: 0;*/
