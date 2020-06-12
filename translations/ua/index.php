@@ -7,6 +7,7 @@ return [
     'Military educations' => 'Військові навчання',
     'Parking' => 'Автомобільні парковки',
     'Constructions' => 'Будівництво',
+    'Beaches' => 'Пляжі',
     'Competitions' => 'Спортивні змагання',
     'Festivals and events' => 'Фестивалі та масові заходи',
     'We cooperate with leading global companies' => 'Наша команда співпрацює з провідними компаніями світового масштабу',

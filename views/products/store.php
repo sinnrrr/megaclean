@@ -22,7 +22,7 @@ $this->registerCssFile('@web/css/all.min.css');
 ?>
 
 <div class="site-store">
-    <h1 class="text-center"><?= empty($category) ? \Yii::t('app', 'Store') : \Yii::t('select', ucfirst($productName)) ?></h1>
+    <h1 class="text-center"><?= empty($category) ? \Yii::t('app', 'Production') : \Yii::t('select', ucfirst($productName)) ?></h1>
     <div class="flex-center">
         <?php
         foreach ($products as $product){

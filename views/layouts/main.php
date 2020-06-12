@@ -82,6 +82,8 @@ if (!empty($m)) {
     $this->registerJs("displayNotify('{$message}')");
 }
 
+$this->registerCssFile("@web/css/all.min.css");
+
 ?>
 
 <?php $this->beginPage() ?>
@@ -122,35 +124,44 @@ if (!empty($m)) {
 
 <div class="wrap">
     <?php
+
     NavBar::begin([
         'brandLabel' => "<img src='{$webUrl}/img/logo.png' class='logo' alt='Logo image'>",
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse',
+            'class' => 'navbar navbar-expand-xl navbar-inverse',
         ],
     ]);
-    ?>
 
-    <?php echo Nav::widget([
+    echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => \Yii::t('app', 'Store'), 'url' => ['/products/store']],
+            ['label' => \Yii::t('app', 'Production'), 'url' => ['/products/store']],
             ['label' => \Yii::t('app', 'Order'), 'url' => ['/site/order']],
             ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
             ['label' => \Yii::t('app', 'Cart'), 'url' => ['/site/cart']],
             $languageItem->toArray(),
         ],
-    ]) ?>
+    ]);
 
-    <section class="number">
-        <span>+380</span>
+    NavBar::end();
+
+    ?>
+
+    <section class="contact">
         <div>
-            <a href="tel:+380677872408">677872408</a>
-            <a href="tel:+380507191317">507191317</a>
+            <span class="fas fa-phone"></span>
+            <a href="tel:+380677872408">+380 67 7872 408</a>
+        </div>
+        <div>
+            <span class="fas fa-envelope"></span>
+            <a href="mailto:office@megaclean.com.ua">office@megaclean.com.ua</a>
+        </div>
+        <div>
+            <span class="fas fa-phone"></span>
+            <a href="tel:+380507191317">+380 50 7191 317</a>
         </div>
     </section>
-
-    <?php NavBar::end() ?>
 
     <div class="wrapper">
         <?= Breadcrumbs::widget([
@@ -162,6 +173,20 @@ if (!empty($m)) {
 
 </div>
 
+<section class="contact">
+    <div>
+        <span class="fas fa-phone"></span>
+        <a href="tel:+380677872408">+380 67 7872 408</a>
+    </div>
+    <div>
+        <span class="fas fa-envelope"></span>
+        <a href="mailto:office@megaclean.com.ua">office@megaclean.com.ua</a>
+    </div>
+    <div>
+        <span class="fas fa-phone"></span>
+        <a href="tel:+380507191317">+380 50 7191 317</a>
+    </div>
+</section>
 <footer class="footer">
     <div class="container">
         <div class="footer-copyright text-center py-3">

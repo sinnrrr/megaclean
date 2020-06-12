@@ -6,7 +6,6 @@ use yii\helpers\Url;
 
 $this->title = Yii::$app->name . " - " . Yii::t('app', 'Mobile portable sanitary and more!');
 $this->registerCssFile('@web/css/index.css');
-$this->registerCssFile("@web/css/all.min.css");
 
 global $imgUrl;
 $imgUrl = Yii::getAlias('@web') . '/img';
@@ -21,7 +20,7 @@ function renderBrands()
     unset($imagesArray[1]);
 
     foreach ($imagesArray as $image) {
-        echo "<img src='{$imgUrl}/brands/{$image}' alt='Carousel photo'>";
+        echo "<img src='{$imgUrl}/brands/{$image}' alt='Brand photo'>";
     }
 }
 
@@ -37,6 +36,7 @@ function renderBrands()
                 <li data-target="#myCarousel" data-slide-to="2"></li>
                 <li data-target="#myCarousel" data-slide-to="3"></li>
                 <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -57,6 +57,13 @@ function renderBrands()
 
                 <div class="item">
                     <div class="carousel-caption">
+                        <h3><?= \Yii::t('index', 'Beaches') ?></h3>
+                    </div>
+                    <img src="<?= $imgUrl ?>/carousel/beaches.png" alt="Beach photo">
+                </div>
+
+                <div class="item">
+                    <div class="carousel-caption">
                         <h3><?= \Yii::t('index', 'Military educations') ?></h3>
                     </div>
                     <img src="<?= $imgUrl ?>/carousel/military.jpg" alt="Military educations photo">
@@ -73,7 +80,7 @@ function renderBrands()
                     <div class="carousel-caption">
                         <h3><?= \Yii::t('index', 'Competitions') ?></h3>
                     </div>
-                    <img src="<?= $imgUrl ?>/carousel/competitions.png" alt="Competitions photo">
+                    <img src="<?= $imgUrl ?>/carousel/competitions.jpg" alt="Competitions photo">
                 </div>
             </div>
 
@@ -86,6 +93,8 @@ function renderBrands()
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <span class="sr-only">Next</span>
             </a>
+
+            <img class="brand-watermark" src="<?= $imgUrl ?>/logo_rounded.png" alt="Watermark image">
         </div>
     </div>
     <hr>

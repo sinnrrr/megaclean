@@ -197,25 +197,42 @@ a.btn {
     top: -50%;
 }
 
-section.number {
-    display: inline-flex;
-    height: 50px !important;
-    color: #007bff !important;
-    font-weight: 700;
-}
-
-section.number > span {
-    font-size: 30px;
-    padding: 5px 0;
-}
-
-section.number > div {
+section.contact {
     display: flex;
-    flex-direction: column;
-    line-height: 15px;
-    padding: 10px 5px;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: #007bff;
+    padding: 15px 20%;
+    font-size: 24px;
+    font-weight: 700;
+    color: white !important;
 }
 
-section.number > div > a {
-    font-size: 15px;
+section.contact > div > span {
+    animation: blinker 3s linear infinite;
+}
+
+section.contact > div:nth-child(2) > span {
+    animation-delay: 1s;
+}
+
+section.contact > div:nth-child(3) > span {
+    animation-delay: 2s;
+}
+
+section.contact > div > a, section.contact > div > a:active, section.contact > div > a:visited {
+    color: white !important;
+}
+
+@media screen and (max-width: 1480px) {
+    section.contact {
+        padding: 15px 5%;
+    }
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }

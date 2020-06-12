@@ -7,6 +7,7 @@ return [
     'Sale' => 'Продаж',
     'Festivals and events' => 'Фестивали и массовые мероприятия',
     'Constructions' => 'Строительство',
+    'Beaches' => 'Пляжи',
     'Military educations' => 'Военные учения',
     'Parking' => 'Автостоянки',
     'Competitions' => 'Соревнования',
@@ -16,5 +17,4 @@ return [
     'Delivery' => 'Доставка',
     'Assembling' => 'Монтаж',
     'Dismantling' => 'Демонтаж',
-
 ];

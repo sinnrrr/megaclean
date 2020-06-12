@@ -2,6 +2,7 @@
 
 return [
     'Store' => 'Каталог',
+    'Production' => 'Продукція',
     'About Us' => 'Про Нас',
     'Contact' => 'Контакти',
     'English' => 'Англійська',

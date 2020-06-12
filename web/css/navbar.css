@@ -3,7 +3,9 @@
     border: 0;
     text-transform: uppercase;
     border-bottom: 3px solid #007bff !important;
-    box-shadow: 0 0 30px 5px white;
+    margin-bottom: 0;
+    border-radius: 0 !important;
+    /*box-shadow: 0 0 30px 5px white;*/
     /*animation: 1s ease-in-out fadeInDown;*/
 }
 
@@ -80,24 +82,6 @@ button.order-button {
 ul.navbar-nav {
     padding-left: 0;
 }
-
-/*.order-button {*/
-/*    display: block;*/
-/*    background-color: white;*/
-/*    border: 1px solid #007bff;*/
-/*    color: #007bff;*/
-/*    text-align: center;*/
-/*    font-weight: 700;*/
-/*    font-size: 17px;*/
-/*    letter-spacing: 1px;*/
-/*    padding: 5px 10px;*/
-/*    border-radius: 3px;*/
-/*    margin-top: 7px;*/
-/*}*/
-
-/*.order-button:hover {*/
-
-/*}*/
 
 ul#w1 > li.dropdown > ul#w2 {
     margin-top: 3px;
