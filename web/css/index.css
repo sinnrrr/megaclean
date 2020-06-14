@@ -253,6 +253,16 @@ section.working-process-mobile > div.block-holder > div.block > div.block-text >
     font-size: 32px;
 }
 
+div.where {
+    text-align: center;
+}
+
+div.where > i {
+    font-size: 40px;
+    animation-delay: 4s;
+    animation: blinker 3s linear infinite;
+}
+
 @media screen and (max-width: 576px) {
     section.about {
         padding: 60px 30px;

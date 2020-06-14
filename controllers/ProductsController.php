@@ -162,4 +162,14 @@ class ProductsController extends Controller
     {
         return $this->render('view', ['id' => $id]);
     }
+
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionService()
+    {
+        return $this->render('service');
+    }
 }

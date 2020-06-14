@@ -35,3 +35,7 @@ div.no-items {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+div.flex-center > p, div.flex-center > a {
+    font-size: 20px;
+}

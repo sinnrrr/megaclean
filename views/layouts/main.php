@@ -82,7 +82,51 @@ if (!empty($m)) {
     $this->registerJs("displayNotify('{$message}')");
 }
 
-$this->registerCssFile("@web/css/all.min.css");
+$metaString = "";
+$translationFiles = [];
+$translationArray = [];
+
+// getting list of translations for ru
+$translationFiles['ru'] = scandir('../translations/ru/');
+unset($translationFiles['ru'][0], $translationFiles['ru'][1]);
+
+// getting list of translations for ua
+$translationFiles['ua'] = scandir('../translations/ua/');
+unset($translationFiles['ua'][0], $translationFiles['ua'][1]);
+
+// getting translations from file for ru
+foreach ($translationFiles['ru'] as $translationFile) {
+    $translationArray['ru'][$translationFile] = include "../translations/ru/{$translationFile}";
+}
+
+// getting translations from file for ua
+foreach ($translationFiles['ua'] as $translationFile) {
+    $translationArray['ua'][$translationFile] = include "../translations/ua/{$translationFile}";
+}
+
+// setting translation values as meta tags for ru
+foreach ($translationArray['ru'] as $translation) {
+    foreach ($translation as $value) {
+        $metaString .= $value . ',';
+    }
+}
+
+// setting translation values as meta tags for ua
+foreach ($translationArray['ua'] as $translation) {
+    foreach ($translation as $key => $value) {
+        $metaString .= $key . ',' . $value . ',';
+    }
+}
+
+// adding custom keywords
+$metaString = "оренда біотуалетів,оренда умивальників,оренда портативної санітарії,оренда душових кабін,покупка,продаж біотуалетів,сервіс біотуалетів,сервіс,мегаклин,клин,мегаклін,Мегаклін,Мегаклин,Megaclean,megaclean,clean,cleaning,покупка біотуалетів,дезінфікуючі стійки,оренда фестиваль,покупка умивальників,купити біотуалет,купити душову кабіну,купити портативну санітарію,прибирання біотуалетів,оренда дезінфікуючих стійок,оренда пісуарів,купити пісуар,оренда мусорних баків,купити мусорний бак,купить биотуалет, купить стойку, купить дезинфицурующую стойку,купить умывальник,портативная санитария,оренда биотуалета,оренда душевой кабины,оренда душевых кабин,оренда мусорных баков,оренда писуаров,купить писуар," . $metaString;
+
+$metaString = substr($metaString, 0, -1);
+
+$this->registerMetaTag([
+        'name' => 'keywords',
+        'content' => $metaString
+]);
 
 ?>
 
@@ -104,16 +148,15 @@ $this->registerCssFile("@web/css/all.min.css");
 
         gtag('config', 'UA-168946176-1');
     </script>
+    <title><?= Html::encode($this->title) ?></title>
     <meta name="robots" content="all">
     <meta name="googlebot" content="all">
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="author" content="Dmytro Soltusyuk">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-          content="Megaclean - компания с многолетним опытом работы в среде портативной санитарии. Мы надаем услугу оренды, чистки и продажи биотуалетов, мобильных умывальников, душевых кабин и много чего еще!">
+    <meta name="description" content="<?= Yii::t('app', 'Megaclean is a company with many years of experience in portable sanitation. We offer the service of renting, cleaning and selling biotoilets, mobile washbasins, showers and much more!') ?>">
     <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -140,6 +183,7 @@ $this->registerCssFile("@web/css/all.min.css");
             ['label' => \Yii::t('app', 'Order'), 'url' => ['/site/order']],
             ['label' => \Yii::t('app', 'Contact'), 'url' => ['/site/contact']],
             ['label' => \Yii::t('app', 'Cart'), 'url' => ['/site/cart']],
+            ['label' => \Yii::t('app', 'Gallery'), 'url' => ['/site/gallery']],
             $languageItem->toArray(),
         ],
     ]);

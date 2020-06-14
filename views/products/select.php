@@ -8,6 +8,7 @@ use app\models\Product;
 $this->title = Yii::t('app', 'Store') . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/select.css');
 
+
 $productsAvailable = [];
 $listOfProducts = [
     0 => 'biotoilets',
@@ -19,8 +20,6 @@ $listOfProducts = [
     6 => 'garbage_containers',
     7 => 'disinfecting_racks'
 ];
-
-
 
 switch ($mode) {
     case 'sale':

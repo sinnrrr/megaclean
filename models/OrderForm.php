@@ -56,10 +56,20 @@ class OrderForm extends Model
                 $quantity = $item->getQuantity();
                 $product = $item->getProduct();
 
-                $this->body .= "{$product->model} ({$quantity})" . PHP_EOL;
+                if ($product->is_sellable && $product->is_rentable) {
+                    $productMode = 'Оренда/Продаж';
+                } else {
+                    if ($product->is_sellable) {
+                        $productMode = 'Продаж';
+                    } elseif ($product->is_rentable) {
+                        $productMode = 'Оренда';
+                    }
+                }
+
+                $this->body .= "{$product->model} [{$productMode}] ({$quantity})" . PHP_EOL;
             }
 
-            $this->subject = 'Замовлення:' . ' ' . $this->phone . ' ' . $this->name;
+            $this->subject = "Замовлення: {$this->phone} {$this->name}";
 
             Yii::$app->mailer->compose()
                 ->setTo(Yii::$app->params['adminEmail'])

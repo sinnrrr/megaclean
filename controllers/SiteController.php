@@ -101,16 +101,6 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionService()
-    {
-        return $this->render('service');
-    }
-
-    /**
      * Displays cart page.
      *
      * @return string
@@ -118,5 +108,15 @@ class SiteController extends Controller
     public function actionCart()
     {
         return $this->render('cart');
+    }
+
+    /**
+     * Displays cart page.
+     *
+     * @return string
+     */
+    public function actionGallery()
+    {
+        return $this->render('gallery');
     }
 }

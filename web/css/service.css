@@ -1,0 +1,19 @@
+div.site-service > div {
+    width: 80% !important;
+    margin: auto auto;
+    font-size: 20px;
+}
+
+div.site-service > div > img {
+    height: 300px;
+    margin: 15px;
+    float:right
+}
+
+@media screen and (max-width: 576px) {
+    div.site-service > div > img {
+        width: 100%;
+        height: auto;
+        margin: 5px auto;
+    }
+}

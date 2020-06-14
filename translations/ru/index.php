@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'Portable sanitation is needed' => 'Портативной санитарии требует',
     'We provide a full range of services related to mobile sanitation systems' => 'Мы предоставляем полный спектр услуг, связанных с системами мобильной санитарии',
     'We cooperate with leading global companies' => 'Наша команда сотрудничает с ведущими компаниями мирового уровня',
     'Rent' => 'Оренда',

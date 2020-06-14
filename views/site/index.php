@@ -7,6 +7,7 @@ use yii\helpers\Url;
 $this->title = Yii::$app->name . " - " . Yii::t('app', 'Mobile portable sanitary and more!');
 $this->registerCssFile('@web/css/index.css');
 
+
 global $imgUrl;
 $imgUrl = Yii::getAlias('@web') . '/img';
 
@@ -27,6 +28,10 @@ function renderBrands()
 ?>
 
 <div class="site-index">
+    <div class="where">
+        <h1><?= Yii::t('index', 'Portable sanitation is needed') ?></h1>
+        <i class="fas fa-arrow-down"></i>
+    </div>
     <div class="flex-center">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -108,10 +113,10 @@ function renderBrands()
                 <a href="<?= Url::toRoute(['products/select', 'mode' => 'rent']) ?>"><?= \Yii::t('index', 'Rent') ?></a>
             </div>
             <div class="card">
-                <a href="<?= Url::toRoute('site/service') ?>">
+                <a href="<?= Url::toRoute('products/service') ?>">
                     <img src="<?= $imgUrl ?>/index/service.png" alt="Service process icon">
                 </a>
-                <a href="<?= Url::toRoute('site/service') ?>"><?= \Yii::t('app', 'Service') ?></a>
+                <a href="<?= Url::toRoute('products/service') ?>"><?= \Yii::t('app', 'Service') ?></a>
             </div>
             <div class="card">
                 <a href="<?= Url::toRoute(['products/select', 'mode' => 'sale']) ?>">

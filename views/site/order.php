@@ -13,6 +13,7 @@ use yii\captcha\Captcha;
 $this->title = Yii::t('app', 'Order') . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/contact.css');
 
+
 $cartItemsCounter = Yii::$app->cart->getTotalCount();
 
 ?>
@@ -30,6 +31,7 @@ $cartItemsCounter = Yii::$app->cart->getTotalCount();
     <?php elseif ($cartItemsCounter > 0): ?>
         <div class="flex-center">
             <h1><?= \Yii::t('app', 'Order') ?></h1>
+            <a href="https://goo.gl/maps/s7obqQo1JFRFMqEH7" target="_blank"><?= Yii::t('contact', 'We are located at st. Saussures 2, Lutsk, Ukraine') ?></a>
         </div>
         <div class="email-form">
             <?php $form = ActiveForm::begin(['id' => 'contact-form', 'class' => 'flex-center']); ?>

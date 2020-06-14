@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'We offer a service of rented toilets, as well as biotoilets, which are the property of the customer.'
+    => 'Ми пропонуємо послугу сервісу туалетів, що орендуються, а також біотуалетів, що є власністю замовника.',
+
     'As a standard, we offer a portable sanitation rental service with one, two or four services per month.'
     => 'Як стандарт, ми пропонуємо послугу оренди біотуалетів з одним, двома або чотирма послугами сервісу в місяць.',
 

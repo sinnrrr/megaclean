@@ -1,0 +1,12 @@
+a.gallery-item {
+    margin: 5px;
+}
+
+a.gallery-item > img {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+div.flex-center {
+    padding: 15px;
+}

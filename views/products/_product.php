@@ -4,10 +4,24 @@
 
 use yii\helpers\Url;
 
+$webUrl = Yii::getAlias('@web');
+$condition = $product['status'] != 'available';
+$buttonText = Yii::t('app', 'Order');
 $product['photos'] = json_decode($product['photos'], true);
 
-$condition = $product['status'] != 'available';
-$webUrl = Yii::getAlias('@web');
+if ($condition) {
+    $buttonText = Yii::t('app', 'Read about');
+} else {
+    if ($product['is_sellable'] && $product['is_rentable']) {
+        $buttonText = Yii::t('cart', 'Rent') . '/' . $productMode = Yii::t('cart', 'Sale');
+    } else {
+        if ($product['is_sellable']) {
+            $buttonText = Yii::t('app', 'Buy');
+        } elseif ($product['is_rentable']) {
+            $buttonText = Yii::t('app', 'Rent');
+        }
+    }
+}
 
 ?>
 <div class="product <?= $condition ?? 'disabled' ?>">
@@ -27,10 +41,6 @@ $webUrl = Yii::getAlias('@web');
                     'cart/add',
                     'id' => $product['id'],
                     'redirect' => Url::current()
-           ]) ?>">
-            <?= $condition
-                ? \Yii::t('app', 'Read about')
-                : \Yii::t('app', 'Order') ?>
-        </a>
+           ]) ?>"><?= $buttonText ?></a>
     </div>
 </div>

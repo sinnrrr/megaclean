@@ -13,6 +13,7 @@ use yii\captcha\Captcha;
 $this->title = Yii::t('app', 'Order') . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/contact.css');
 
+
 ?>
 
 <div class="site-contact">
@@ -29,7 +30,9 @@ $this->registerCssFile('@web/css/contact.css');
         <div class="flex-center">
             <h1><?= \Yii::t('app', 'Contact') ?></h1>
             <p><?= \Yii::t('contact',
-                    'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?></p>
+                    'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.') ?>
+            </p>
+            <a href="https://goo.gl/maps/s7obqQo1JFRFMqEH7" target="_blank"><?= Yii::t('contact', 'We are located at st. Saussures 2, Lutsk, Ukraine') ?></a>
         </div>
         <div class="email-form">
             <?php $form = ActiveForm::begin(['id' => 'contact-form', 'class' => 'flex-center']); ?>

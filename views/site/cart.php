@@ -30,6 +30,17 @@ $webUrl = Yii::getAlias('@web');
                         $product = $item->getProduct();
                         $photo = json_decode($product->photos)[0];
 
+                        if ($product->is_sellable && $product->is_rentable) {
+                            $productMode = Yii::t('cart', 'Rent') . '/' . $productMode = Yii::t('cart', 'Sale');
+                        } else {
+                            if ($product->is_sellable) {
+                                $productMode = Yii::t('cart', 'Sale');
+                            } elseif ($product->is_rentable) {
+                                $productMode = Yii::t('cart', 'Rent');
+                            }
+                        }
+
+
                         ?>
                         <div class="item">
                             <div class="info">
@@ -40,6 +51,9 @@ $webUrl = Yii::getAlias('@web');
                                 <div class="info-text">
                                     <a href="<?= Url::toRoute(['products/view', 'id' => $product->id]) ?>">
                                         <?= $product->model ?></a>
+                                    <small>
+                                        <?= Yii::t('cart', 'Mode') . ': ' . $productMode ?>
+                                    </small>
                                     <div class="counter">
                                         <span><?= Yii::t('cart', 'Quantity') ?></span>
                                         <div class="counter-body">

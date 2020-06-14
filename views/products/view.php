@@ -9,6 +9,7 @@ use yii\helpers\Url;
 
 $productInfo = Product::getProductById($id);
 
+$buttonText = Yii::t('app', 'Order');
 $this->title = $productInfo['model'] . ' | ' . Yii::$app->name;
 $this->registerCssFile('@web/css/product.css');
 $this->registerCssFile('@web/css/all.min.css');
@@ -19,6 +20,18 @@ if (!empty($productInfo['photos'])) {
     foreach ($productInfo['photos'] as $key => $value) {
         $galleryItems[$key]['url'] = '@web/uploads/' . $value;
         $galleryItems[$key]['src'] = '@web/uploads/' . $value;
+    }
+}
+
+if ($productInfo['status'] == 'available') {
+    if ($productInfo['is_sellable'] && $productInfo['is_rentable']) {
+        $buttonText = Yii::t('cart', 'Rent') . '/' . $productMode = Yii::t('cart', 'Sale');
+    } else {
+        if ($productInfo['is_sellable']) {
+            $buttonText = Yii::t('app', 'Buy');
+        } elseif ($productInfo['is_rentable']) {
+            $buttonText = Yii::t('app', 'Rent');
+        }
     }
 }
 
@@ -36,14 +49,14 @@ if (!empty($productInfo['photos'])) {
         <h1><?= $productInfo['model'] ?></h1>
         <small>Страна производителя: <?= Yii::t('view', $productInfo['manufacture']) ?></small>
         <div><?= $productInfo['description'] ?></div>
+        <?php if ($productInfo['status'] == 'available'): ?>
         <a class="order-button"
            href="<?= Url::to([
                'cart/add',
                'id' => $productInfo['id'],
                'redirect' => Url::current()
-           ]) ?>">
-            <?= \Yii::t('app', 'Order') ?>
-        </a>
+           ]) ?>"><?= $buttonText ?></a>
+        <?php endif; ?>
     </div>
 </div>
 
