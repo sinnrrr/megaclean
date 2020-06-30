@@ -199,7 +199,7 @@ $this->registerMetaTag([
         </div>
         <div>
             <span class="fas fa-envelope"></span>
-            <a href="mailto:office@megaclean.com.ua">office@megaclean.com.ua</a>
+            <a href="mailto:megaclean.office@ukr.net">megaclean.office@ukr.net</a>
         </div>
         <div>
             <span class="fas fa-phone"></span>
@@ -224,7 +224,7 @@ $this->registerMetaTag([
     </div>
     <div>
         <span class="fas fa-envelope"></span>
-        <a href="mailto:office@megaclean.com.ua">office@megaclean.com.ua</a>
+        <a href="mailto:megaclean.office@ukr.net">megaclean.office@ukr.net</a>
     </div>
     <div>
         <span class="fas fa-phone"></span>
